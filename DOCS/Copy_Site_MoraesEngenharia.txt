@@ -1,0 +1,176 @@
+
+
+
+
+
+MORAES ENGENHARIA
+COPY ESTRATÉGICA — SITE INSTITUCIONAL
+Documento de conteúdo para desenvolvimento do site
+Preparado por Rangel.rec — Abril 2026
+
+
+
+
+
+
+
+Paleta de cores: #E5A100  |  #000000  |  #FFFFFF
+
+ÍNDICE DE SEÇÕES
+01. Hero (primeira dobra)
+02. Sobre / A Empresa
+03. Serviços
+04. Números / Prova Social
+05. Portfólio / Obras
+06. Contato / CTA Final
+07. Rodapé
+08. Metadados SEO
+
+Instrução: Cada seção contém o texto final, notas de direção para o desenvolvedor e indicações de onde usar placeholders para dados que o cliente ainda precisa confirmar.
+Placeholders estão marcados com [PLACEHOLDER] e devem ser substituídos pelos dados reais antes da publicação.
+
+SEÇÃO 01
+HERO — PRIMEIRA DOBRA
+
+Tagline (pré-título): Construções comerciais de alto padrão
+Headline Principal:
+Nós não entregamos obras.
+Entregamos confiança.
+Sub-headline: Construções verticais, galpões industriais e comerciais com gestão de alto padrão, previsibilidade de prazo e controle absoluto de qualidade.
+CTA Primário (botão): Fale com a Moraes
+CTA Secundário (link): Conheça nossas obras ↓
+
+Direção visual: Imagem de fundo com obra entregue de grande porte (galpão ou prédio comercial). Overlay escuro para contraste. Texto em branco com detalhes em dourado #E5A100. O botão do CTA deve ser dourado com texto preto.
+
+SEÇÃO 02
+SOBRE — A EMPRESA
+
+Pré-título: Quem somos
+Título da seção:
+Construímos mais do que estruturas.
+Construímos relações.
+A Moraes Engenharia nasceu em 2018, quando Lucas Moraes realizou sua primeira obra comercial para um cliente do mercado de importação no centro de São Paulo. O que começou como um projeto pontual se transformou em uma relação de confiança — e essa confiança se tornou o alicerce de tudo que viria depois.
+De uma reforma comercial na 25 de Março a construções verticais de grande porte, a trajetória da Moraes foi construída projeto a projeto, com uma premissa inegociável: cada obra precisa ser melhor que a anterior.
+Hoje, com 8 anos de experiência e atuação em São Paulo e Rio de Janeiro, somos reconhecidos por três pilares que definem cada entrega:
+
+Compromisso com prazo — Prazo é contrato moral. Atraso não é opção, é exceção com plano de ação imediato.
+Excelência em execução — Fazer certo na primeira vez. Padrão alto não é diferencial, é obrigação.
+Foco no cliente — Comunicação clara, postura profissional e entrega acima da expectativa.
+
+Direção visual: Layout em duas colunas — texto à esquerda, foto do Lucas em obra ou foto de equipe à direita. Tom sóbrio, fundo claro. Os três pilares podem ser destacados com ícones minimalistas e a cor dourada.
+
+SEÇÃO 03
+SERVIÇOS
+
+Pré-título: O que fazemos
+Título: Soluções completas para empreendimentos comerciais
+Da concepção à entrega das chaves, a Moraes Engenharia oferece gestão integral de obras comerciais com controle rigoroso de prazo, custo e qualidade.
+
+Construções Verticais
+Edifícios comerciais projetados para máxima eficiência de uso. Estruturas pensadas para operação, locação por andar ou uso próprio, com padrão construtivo que valoriza o investimento no longo prazo.
+Galpões Industriais e Comerciais
+Estruturas de grande porte para operação logística, estoque ou comércio. Projetos dimensionados conforme a necessidade do negócio, com foco em funcionalidade, resistência e prazo de entrega.
+Reformas Estruturais e Adequações
+Transformação de imóveis existentes para nova finalidade comercial. Demolição parcial ou total e reconstrução com projeto atualizado, mantendo viabilidade técnica e conformidade legal.
+Gestão e Acompanhamento de Obras
+Controle completo de cronograma, orçamento e qualidade. Relatórios periódicos, comunicação transparente e resolução ágil de imprevistos. O cliente acompanha cada etapa com segurança.
+
+Direção visual: Cards com ícone minimalista, título em preto e descrição em cinza. Hover com borda dourada. Layout em grid 2x2 ou lista vertical em mobile.
+
+SEÇÃO 04
+NÚMEROS — PROVA SOCIAL
+
+Faixa horizontal com fundo preto e números em dourado. Contadores animados ao scroll.
+
+Número 1: 8+ anos de experiência
+Legenda: No mercado de construção comercial
+
+Número 2: 90+ obras entregues
+Legenda: Entre construções, reformas e galpões
+
+Número 3: [PLACEHOLDER] m² construídos
+Legenda: Em empreendimentos comerciais e industriais
+
+Número 4: 2 estados atendidos
+Legenda: São Paulo e Rio de Janeiro
+
+Instrução: Os valores marcados com [PLACEHOLDER] precisam ser confirmados pelo cliente antes da publicação. Sugestão: solicitar ao Lucas os números aproximados.
+Direção visual: Fundo #000000, números grandes em #E5A100, legendas em branco. Animação de contagem ao entrar na viewport.
+
+SEÇÃO 05
+PORTFÓLIO — OBRAS
+
+Pré-título: Nosso trabalho
+Título: Cada obra conta uma história de confiança
+Texto de apoio: Conheça alguns dos projetos que construíram a reputação da Moraes Engenharia. De reformas comerciais a edifícios de grande porte, cada entrega reflete nosso compromisso com excelência.
+
+Estrutura sugerida para cada card de obra:
+
+Foto principal: Imagem de destaque da obra finalizada
+Nome do projeto: Ex: Edifício Comercial — Rua 25 de Março
+Tipo: Construção vertical / Galpão / Reforma
+Localização: Bairro, Cidade
+Área construída: X m²
+Prazo de execução: X meses
+
+Direção visual: Grid de cards com foto, hover revela informações. Possibilidade de página individual por obra com galeria de fotos (antes/durante/depois). Filtro por tipo de obra é opcional mas recomendado.
+Instrução: Solicitar ao cliente fotos profissionais das obras ou agendar sessão fotográfica. Este é o ponto mais importante do site para conversão.
+
+SEÇÃO 06
+CONTATO — CTA FINAL
+
+Pré-título: Próximo passo
+Título: Vamos construir juntos?
+Texto de apoio: Cada grande projeto começa com uma conversa. Conte pra gente o que você precisa e descubra como a Moraes pode transformar sua visão em estrutura.
+
+Botão WhatsApp: Fale pelo WhatsApp
+WhatsApp: (21) 98177-6680
+Nota: O cliente mencionou que irá adquirir um número exclusivo para a empresa. Atualizar quando disponível.
+
+E-mail: contato@moraesengenharia.com
+Endereço: Rua Boa Vista, 254 — Sala 1516, Centro Histórico de São Paulo — SP
+Instagram: @lucasimas__
+
+Formulário simples (opcional):
+Campos: Nome | Telefone | Tipo de projeto | Mensagem
+
+Direção visual: Fundo escuro ou imagem de obra ao fundo com overlay. Botão dourado grande pro WhatsApp. Formulário como alternativa secundária. Mapa do Google com localização do escritório.
+
+SEÇÃO 07
+RODAPÉ
+
+Coluna 1 — Marca: Logo Moraes Engenharia (versão branca)
+Construções comerciais de alto padrão em São Paulo e Rio de Janeiro.
+
+Coluna 2 — Navegação: Início | Sobre | Serviços | Obras | Contato
+
+Coluna 3 — Contato: WhatsApp | E-mail | Endereço
+
+Linha inferior: CREA-SP 2884830 | LS Moraes Serviços em Engenharia Ltda | CNPJ 47.457.237/0001-60
+© 2026 Moraes Engenharia. Todos os direitos reservados.
+
+SEÇÃO 08
+METADADOS SEO
+
+Title tag: Moraes Engenharia | Construções Comerciais de Alto Padrão em SP e RJ
+Meta description: Construtora especializada em edifícios comerciais, galpões industriais e reformas estruturais. 8 anos de experiência, compromisso com prazo e qualidade inegociável. São Paulo e Rio de Janeiro.
+Keywords (referência): construtora comercial São Paulo, construção vertical, galpão industrial SP, reforma comercial centro SP, construtora alto padrão, engenharia civil SP, construção prédio comercial
+OG Title: Moraes Engenharia — Construções que geram confiança
+OG Description: Construtora de alto padrão especializada em empreendimentos comerciais. Compromisso com prazo, excelência em execução e foco no cliente.
+
+
+
+NOTAS FINAIS
+CHECKLIST DE PRODUÇÃO
+
+Antes de publicar o site, confirmar com o cliente:
+
+□  Número total de obras entregues (para seção de números)
+□  Metros quadrados construídos (para seção de números)
+□  Fotos profissionais de obras finalizadas (para portfólio)
+□  Número de WhatsApp definitivo da empresa
+□  Perfil do LinkedIn (se houver)
+□  Aprovação dos textos finais pelo Lucas
+□  Domínio definido (moraesengenharia.com ou similar)
+
+Recomendação: Agendar uma produção fotográfica/audiovisual das obras entregues. O portfólio visual é o principal ativo de conversão para este perfil de cliente.
