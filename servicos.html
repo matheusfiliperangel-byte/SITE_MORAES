@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>MORAES - Serviços Especializados</title>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&family=Inter:wght@300;400;500;600&family=Space+Mono&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&family=Outfit:wght@300;400;500;600&family=Space+Mono&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
@@ -25,7 +25,7 @@ tailwind.config = {
             },
             fontFamily: {
                 "headline": ["Manrope", "sans-serif"],
-                "body": ["Inter", "sans-serif"],
+                "body": ["Outfit", "sans-serif"],
                 "mono": ["Space Mono", "monospace"]
             }
         }
@@ -41,7 +41,8 @@ tailwind.config = {
     body { cursor: none; overflow-x: hidden; }
     .material-symbols-outlined { font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24; }
     .grain { position: fixed; inset: 0; pointer-events: none; z-index: 9999; opacity: 0.05; background: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PScwIDAgMjAwIDIwMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz4KICA8ZmlsdGVyIGlkPSdub2lzZSc+CiAgICA8ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC42NScgbnVtT2N0YXZlcz0nMycgc3RpdGNoVGlsZXM9J3N0aXRjaCcvPgogIDwvZmlsdGVyPgogIDxyZWN0IHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnIGZpbHRlcj0ndXJsKCNub2lzZSknLz4KPC9zdmc+'); }
-    #cursor-follower { position: fixed; inset: 0; width: 32px; height: 32px; border: 1px solid white; border-radius: 50%; pointer-events: none; z-index: 10000; transition: transform 0.15s var(--ease-out-expo), width 0.3s ease, height 0.3s ease, border-color 0.3s ease; mix-blend-mode: difference; display: flex; align-items: center; justify-content: center; }
+    #cursor-follower { position: fixed; top: 0; left: 0; width: 32px; height: 32px; border: 1px solid white; border-radius: 50%; pointer-events: none; z-index: 10000; transition: transform 0.15s var(--ease-out-expo), width 0.3s ease, height 0.3s ease, border-color 0.3s ease; mix-blend-mode: difference; display: flex; align-items: center; justify-content: center; }
+    #cursor-dot { width: 4px; height: 4px; background: white; border-radius: 50%; }
     .cursor-active #cursor-follower { width: 64px; height: 64px; border-color: #E5A100; }
     .glass-panel { background: var(--frost); backdrop-filter: blur(20px) saturate(150%); border: 1px solid var(--border); }
     .reveal-up { opacity: 0; transform: translateY(40px); transition: transform 1.2s var(--ease-out-expo), opacity 1.2s ease; }
@@ -55,7 +56,7 @@ tailwind.config = {
 <body class="bg-surface-container-lowest text-on-background font-body selection:bg-gold-premium selection:text-white">
 
 <div class="grain"></div>
-<div id="cursor-follower"></div>
+<div id="cursor-follower"><div id="cursor-dot"></div></div>
 
 <!-- Nav -->
 <nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] lg:w-[90%] max-w-[1400px] z-[100] glass-panel rounded-sm">
@@ -104,30 +105,46 @@ tailwind.config = {
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="border-t border-white/10">
                 <!-- Servico 1 -->
-                <div class="glass-panel p-10 group relative overflow-hidden transition-all duration-700 hover:border-gold-premium reveal-up interactive">
-                    <span class="material-symbols-outlined text-gold-premium text-4xl mb-12 group-hover:scale-110 transition-transform duration-500">domain</span>
-                    <h3 class="font-headline font-extrabold text-sm sm:text-base text-white uppercase tracking-[0.2em] mb-4">Construções Verticais</h3>
-                    <p class="text-on-surface-variant/70 text-sm leading-loose font-light">Edifícios comerciais projetados para máxima eficiência de uso. Estruturas pensadas para operação, locação por andar ou uso próprio, com padrão construtivo que valoriza o investimento no longo prazo.</p>
+                <div class="group border-b border-white/10 py-10 md:py-14 flex flex-col md:flex-row gap-6 md:gap-16 items-start reveal-up interactive hover:border-gold-premium/30 transition-colors duration-500 cursor-none">
+                    <span class="font-mono text-gold-premium text-[11px] tracking-[0.4em] shrink-0 pt-1 md:w-16">01</span>
+                    <span class="material-symbols-outlined text-white/20 text-3xl shrink-0 group-hover:text-gold-premium transition-colors duration-500 hidden md:block" style="font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24">domain</span>
+                    <div class="flex-1">
+                        <h3 class="font-headline font-extrabold text-xl md:text-2xl text-white uppercase tracking-tight mb-4 group-hover:text-gold-premium/90 transition-colors duration-300">Construções Verticais</h3>
+                        <p class="text-on-surface-variant/60 text-sm leading-relaxed font-light max-w-2xl">Edifícios comerciais projetados para máxima eficiência de uso. Estruturas pensadas para operação, locação por andar ou uso próprio, com padrão construtivo que valoriza o investimento no longo prazo.</p>
+                    </div>
+                    <span class="material-symbols-outlined text-white/10 text-xl group-hover:text-gold-premium/40 group-hover:translate-x-1 transition-all duration-500 self-center hidden md:block">arrow_forward</span>
                 </div>
                 <!-- Servico 2 -->
-                <div class="glass-panel p-10 group relative overflow-hidden transition-all duration-700 hover:border-gold-premium reveal-up interactive" style="transition-delay: 100ms;">
-                    <span class="material-symbols-outlined text-gold-premium text-4xl mb-12 group-hover:scale-110 transition-transform duration-500">construction</span>
-                    <h3 class="font-headline font-extrabold text-sm sm:text-base text-white uppercase tracking-[0.2em] mb-4">Galpões Industriais e Comerciais</h3>
-                    <p class="text-on-surface-variant/70 text-sm leading-loose font-light">Estruturas de grande porte para operação logística, estoque ou comércio. Projetos dimensionados conforme a necessidade do negócio, com foco em funcionalidade, resistência e prazo de entrega.</p>
+                <div class="group border-b border-white/10 py-10 md:py-14 flex flex-col md:flex-row gap-6 md:gap-16 items-start reveal-up interactive hover:border-gold-premium/30 transition-colors duration-500 cursor-none" style="transition-delay: 80ms;">
+                    <span class="font-mono text-gold-premium text-[11px] tracking-[0.4em] shrink-0 pt-1 md:w-16">02</span>
+                    <span class="material-symbols-outlined text-white/20 text-3xl shrink-0 group-hover:text-gold-premium transition-colors duration-500 hidden md:block" style="font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24">construction</span>
+                    <div class="flex-1">
+                        <h3 class="font-headline font-extrabold text-xl md:text-2xl text-white uppercase tracking-tight mb-4 group-hover:text-gold-premium/90 transition-colors duration-300">Galpões Industriais e Comerciais</h3>
+                        <p class="text-on-surface-variant/60 text-sm leading-relaxed font-light max-w-2xl">Estruturas de grande porte para operação logística, estoque ou comércio. Projetos dimensionados conforme a necessidade do negócio, com foco em funcionalidade, resistência e prazo de entrega.</p>
+                    </div>
+                    <span class="material-symbols-outlined text-white/10 text-xl group-hover:text-gold-premium/40 group-hover:translate-x-1 transition-all duration-500 self-center hidden md:block">arrow_forward</span>
                 </div>
                 <!-- Servico 3 -->
-                <div class="glass-panel p-10 group relative overflow-hidden transition-all duration-700 hover:border-gold-premium reveal-up interactive" style="transition-delay: 200ms;">
-                    <span class="material-symbols-outlined text-gold-premium text-4xl mb-12 group-hover:scale-110 transition-transform duration-500">architecture</span>
-                    <h3 class="font-headline font-extrabold text-sm sm:text-base text-white uppercase tracking-[0.2em] mb-4">Reformas Estruturais</h3>
-                    <p class="text-on-surface-variant/70 text-sm leading-loose font-light">Transformação de imóveis existentes para nova finalidade comercial. Demolição parcial ou total e reconstrução com projeto atualizado, mantendo viabilidade técnica e conformidade legal.</p>
+                <div class="group border-b border-white/10 py-10 md:py-14 flex flex-col md:flex-row gap-6 md:gap-16 items-start reveal-up interactive hover:border-gold-premium/30 transition-colors duration-500 cursor-none" style="transition-delay: 160ms;">
+                    <span class="font-mono text-gold-premium text-[11px] tracking-[0.4em] shrink-0 pt-1 md:w-16">03</span>
+                    <span class="material-symbols-outlined text-white/20 text-3xl shrink-0 group-hover:text-gold-premium transition-colors duration-500 hidden md:block" style="font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24">architecture</span>
+                    <div class="flex-1">
+                        <h3 class="font-headline font-extrabold text-xl md:text-2xl text-white uppercase tracking-tight mb-4 group-hover:text-gold-premium/90 transition-colors duration-300">Reformas Estruturais</h3>
+                        <p class="text-on-surface-variant/60 text-sm leading-relaxed font-light max-w-2xl">Transformação de imóveis existentes para nova finalidade comercial. Demolição parcial ou total e reconstrução com projeto atualizado, mantendo viabilidade técnica e conformidade legal.</p>
+                    </div>
+                    <span class="material-symbols-outlined text-white/10 text-xl group-hover:text-gold-premium/40 group-hover:translate-x-1 transition-all duration-500 self-center hidden md:block">arrow_forward</span>
                 </div>
                 <!-- Servico 4 -->
-                <div class="glass-panel p-10 group relative overflow-hidden transition-all duration-700 hover:border-gold-premium reveal-up interactive" style="transition-delay: 300ms;">
-                    <span class="material-symbols-outlined text-gold-premium text-4xl mb-12 group-hover:scale-110 transition-transform duration-500">layers</span>
-                    <h3 class="font-headline font-extrabold text-sm sm:text-base text-white uppercase tracking-[0.2em] mb-4">Gestão de Obras</h3>
-                    <p class="text-on-surface-variant/70 text-sm leading-loose font-light">Controle completo de cronograma, orçamento e qualidade. Relatórios periódicos, comunicação transparente e resolução ágil de imprevistos. O cliente acompanha cada etapa com segurança.</p>
+                <div class="group border-b border-white/10 py-10 md:py-14 flex flex-col md:flex-row gap-6 md:gap-16 items-start reveal-up interactive hover:border-gold-premium/30 transition-colors duration-500 cursor-none" style="transition-delay: 240ms;">
+                    <span class="font-mono text-gold-premium text-[11px] tracking-[0.4em] shrink-0 pt-1 md:w-16">04</span>
+                    <span class="material-symbols-outlined text-white/20 text-3xl shrink-0 group-hover:text-gold-premium transition-colors duration-500 hidden md:block" style="font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24">layers</span>
+                    <div class="flex-1">
+                        <h3 class="font-headline font-extrabold text-xl md:text-2xl text-white uppercase tracking-tight mb-4 group-hover:text-gold-premium/90 transition-colors duration-300">Gestão de Obras</h3>
+                        <p class="text-on-surface-variant/60 text-sm leading-relaxed font-light max-w-2xl">Controle completo de cronograma, orçamento e qualidade. Relatórios periódicos, comunicação transparente e resolução ágil de imprevistos. O cliente acompanha cada etapa com segurança.</p>
+                    </div>
+                    <span class="material-symbols-outlined text-white/10 text-xl group-hover:text-gold-premium/40 group-hover:translate-x-1 transition-all duration-500 self-center hidden md:block">arrow_forward</span>
                 </div>
             </div>
         </div>

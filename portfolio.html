@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>MORAES - Portfólio Corporativo</title>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&family=Inter:wght@300;400;500;600&family=Space+Mono&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&family=Outfit:wght@300;400;500;600&family=Space+Mono&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
@@ -25,7 +25,7 @@ tailwind.config = {
             },
             fontFamily: {
                 "headline": ["Manrope", "sans-serif"],
-                "body": ["Inter", "sans-serif"],
+                "body": ["Outfit", "sans-serif"],
                 "mono": ["Space Mono", "monospace"]
             }
         }
@@ -41,7 +41,8 @@ tailwind.config = {
     body { cursor: none; overflow-x: hidden; }
     .material-symbols-outlined { font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24; }
     .grain { position: fixed; inset: 0; pointer-events: none; z-index: 9999; opacity: 0.05; background: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PScwIDAgMjAwIDIwMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz4KICA8ZmlsdGVyIGlkPSdub2lzZSc+CiAgICA8ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC42NScgbnVtT2N0YXZlcz0nMycgc3RpdGNoVGlsZXM9J3N0aXRjaCcvPgogIDwvZmlsdGVyPgogIDxyZWN0IHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnIGZpbHRlcj0ndXJsKCNub2lzZSknLz4KPC9zdmc+'); }
-    #cursor-follower { position: fixed; inset: 0; width: 32px; height: 32px; border: 1px solid white; border-radius: 50%; pointer-events: none; z-index: 10000; transition: transform 0.15s var(--ease-out-expo), width 0.3s ease, height 0.3s ease, border-color 0.3s ease; mix-blend-mode: difference; display: flex; align-items: center; justify-content: center; }
+    #cursor-follower { position: fixed; top: 0; left: 0; width: 32px; height: 32px; border: 1px solid white; border-radius: 50%; pointer-events: none; z-index: 10000; transition: transform 0.15s var(--ease-out-expo), width 0.3s ease, height 0.3s ease, border-color 0.3s ease; mix-blend-mode: difference; display: flex; align-items: center; justify-content: center; }
+    #cursor-dot { width: 4px; height: 4px; background: white; border-radius: 50%; }
     .cursor-active #cursor-follower { width: 64px; height: 64px; border-color: #E5A100; }
     .glass-panel { background: var(--frost); backdrop-filter: blur(20px) saturate(150%); border: 1px solid var(--border); }
     .reveal-up { opacity: 0; transform: translateY(40px); transition: transform 1.2s var(--ease-out-expo), opacity 1.2s ease; }
@@ -58,7 +59,7 @@ tailwind.config = {
 <body class="bg-surface text-on-background font-body selection:bg-gold-premium selection:text-white">
 
 <div class="grain"></div>
-<div id="cursor-follower"></div>
+<div id="cursor-follower"><div id="cursor-dot"></div></div>
 
 <!-- Nav -->
 <nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] lg:w-[90%] max-w-[1400px] z-[100] glass-panel rounded-sm">
