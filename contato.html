@@ -1,274 +1,155 @@
 <!DOCTYPE html>
-<html class="scroll-smooth dark" lang="pt-br">
+<html class="dark scroll-smooth" lang="pt-br">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>MORAES - Fale Conosco</title>
-    <meta name="description" content="Contato Moraes Engenharia">
-    <meta name="keywords" content="construtora comercial São Paulo, construção vertical, galpão industrial SP, reforma comercial centro SP, construtora alto padrão, engenharia civil SP, construção prédio comercial">
-    <meta property="og:title" content="Moraes Engenharia — Construções que geram confiança">
-    <meta property="og:description" content="Construtora de alto padrão especializada em empreendimentos comerciais. Compromisso com prazo, excelência em execução e foco no cliente.">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet"/>
+<title>MORAES - Contato e Consultoria</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&family=Inter:wght@300;400;500;600&family=Space+Mono&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
             colors: {
-              "primary": "#ffbe46",
-              "on-primary": "#432c00",
-              "background": "#131313",
-              "on-background": "#e2e2e2",
-              "surface": "#131313",
-              "on-surface": "#e2e2e2",
-              "on-surface-variant": "#d5c4ad",
-              "surface-container-low": "#1b1b1b",
-              "surface-container-lowest": "#0e0e0e",
-              "surface-container-highest": "#353535",
-              "outline-variant": "#514533"
+                "background": "#050505",
+                "surface": "#050505",
+                "surface-container-lowest": "#020202",
+                "surface-container-low": "#1b1b1b",
+                "surface-container-highest": "#353535",
+                "on-background": "#e2e2e2",
+                "on-surface": "#e2e2e2",
+                "on-surface-variant": "#d5c4ad",
+                "gold-premium": "#E5A100"
             },
             fontFamily: {
-              "headline": ["Manrope", "sans-serif"],
-              "body": ["Inter", "sans-serif"]
+                "headline": ["Manrope", "sans-serif"],
+                "body": ["Inter", "sans-serif"],
+                "mono": ["Space Mono", "monospace"]
             }
-          }
         }
-      }
-    </script>
+    }
+}
+</script>
 <style>
-      .material-symbols-outlined {
-        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-      }
-      .brushed-gold {
-        background: linear-gradient(135deg, #ffbe46 0%, #e5a100 100%);
-      }
-      ::-webkit-scrollbar { width: 8px; }
-      ::-webkit-scrollbar-track { background: #131313; }
-      ::-webkit-scrollbar-thumb { background: #353535; }
-      ::-webkit-scrollbar-thumb:hover { background: #ffbe46; }
-
-      /* Custom UI Merging */
-      body { cursor: none; }
-      #cursor-follower {
-          position: fixed; top: 0; left: 0; width: 40px; height: 40px;
-          border: 1px solid #ffbe46; border-radius: 50%;
-          pointer-events: none; z-index: 9999;
-          transition: transform 0.1s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, width 0.3s ease, height 0.3s ease;
-          mix-blend-mode: difference; display: flex; align-items: center; justify-content: center;
-      }
-      #cursor-dot { width: 4px; height: 4px; background: #ffbe46; border-radius: 50%; }
-      .cursor-active #cursor-follower {
-          width: 80px; height: 80px; background: #ffbe46; mix-blend-mode: difference;
-      }
-
-      /* Scroll Logic & Sections */
-      .monolith-content {
-          opacity: 0; transform: translateY(50px);
-          transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
-      }
-      .monolith-content.visible {
-          opacity: 1; transform: translateY(0);
-      }
-
-      /* Floating Frosted Geometry */
-      .geometry-container {
-          position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-          pointer-events: none; z-index: 0;
-      }
-      .monolith-block {
-          position: absolute;
-          background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
-          border: 1px solid rgba(255, 255, 255, 0.1);
-          backdrop-filter: blur(10px);
-          transition: transform 0.1s linear;
-      }
-      .block-1 { width: 300px; height: 500px; right: 10%; top: 20%; z-index: 1; }
-      .block-2 { width: 150px; height: 150px; left: 15%; top: 60%; z-index: 1; }
-
-      /* Progress Vertical */
-      .scroll-progress {
-          position: fixed; right: 2rem; top: 50%; transform: translateY(-50%);
-          height: 200px; width: 1px; background: rgba(255, 255, 255, 0.1); z-index: 100;
-      }
-      .progress-bar {
-          width: 100%; height: 0%; background: #ffbe46; transition: height 0.1s linear;
-      }
-
-      /* Grain Texture Overlay */
-      .grain {
-          position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-          pointer-events: none; z-index: 9998; opacity: 0.04;
-          background: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PScwIDAgMjAwIDIwMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz4KICA8ZmlsdGVyIGlkPSdub2lzZSc+CiAgICA8ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC42NScgbnVtT2N0YXZlcz0nMycgc3RpdGNoVGlsZXM9J3N0aXRjaCcvPgogIDwvZmlsdGVyPgogIDxyZWN0IHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnIGZpbHRlcj0ndXJsKCNub2lzZSknLz4KPC9zdmc+');
-      }
-
-      /* Monolithic UI Layers */
-      .glass-panel {
-          background: rgba(19, 19, 19, 0.4) !important;
-          backdrop-filter: blur(24px) saturate(180%) !important;
-          -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
-          border: 1px solid rgba(255, 255, 255, 0.08) !important;
-          box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-      }
-      
-      .hero-gradient {
-          background: radial-gradient(circle at 50% 50%, rgba(255, 190, 70, 0.05) 0%, transparent 70%);
-      }
-
-      .text-glow {
-          text-shadow: 0 0 30px rgba(255, 190, 70, 0.2);
-      }
-
-      .gold-gradient-text {
-          background: linear-gradient(to right, #ffbe46, #ffffff, #ffbe46);
-          background-size: 200% auto;
-          -webkit-background-clip: text;
-          background-clip: text;
-          -webkit-text-fill-color: transparent;
-          animation: shine 5s linear infinite;
-      }
-
-      @keyframes shine {
-          to { background-position: 200% center; }
-      }
-    </style>
+    :root {
+        --frost: rgba(255, 255, 255, 0.04);
+        --border: rgba(255, 255, 255, 0.1);
+        --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    body { cursor: none; overflow-x: hidden; }
+    .material-symbols-outlined { font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24; }
+    .grain { position: fixed; inset: 0; pointer-events: none; z-index: 9999; opacity: 0.05; background: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PScwIDAgMjAwIDIwMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz4KICA8ZmlsdGVyIGlkPSdub2lzZSc+CiAgICA8ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC42NScgbnVtT2N0YXZlcz0nMycgc3RpdGNoVGlsZXM9J3N0aXRjaCcvPgogIDwvZmlsdGVyPgogIDxyZWN0IHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnIGZpbHRlcj0ndXJsKCNub2lzZSknLz4KPC9zdmc+'); }
+    #cursor-follower { position: fixed; inset: 0; width: 32px; height: 32px; border: 1px solid white; border-radius: 50%; pointer-events: none; z-index: 10000; transition: transform 0.15s var(--ease-out-expo), width 0.3s ease, height 0.3s ease, border-color 0.3s ease; mix-blend-mode: difference; display: flex; align-items: center; justify-content: center; }
+    .cursor-active #cursor-follower { width: 64px; height: 64px; border-color: #E5A100; }
+    .glass-panel { background: var(--frost); backdrop-filter: blur(20px) saturate(150%); border: 1px solid var(--border); }
+    .gold-gradient { background: linear-gradient(135deg, #E5A100 0%, #FFD700 50%, #B8860B 100%); background-size: 200% 200%; transition: background-position 0.5s ease; }
+    .gold-gradient:hover { background-position: 100% 100%; }
+    .reveal-up { opacity: 0; transform: translateY(40px); transition: transform 1.2s var(--ease-out-expo), opacity 1.2s ease; }
+    .reveal-up.visible { opacity: 1; transform: translateY(0); }
+    .section-label { font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 0.4em; color: #E5A100; display: flex; align-items: center; gap: 1rem; }
+    .section-label::before { content: ''; width: 30px; height: 1px; background: #E5A100; }
+    .menu-overlay { position: fixed; inset: 0; background: rgba(5,5,5,0.98); backdrop-filter: blur(30px); z-index: 99; opacity: 0; pointer-events: none; transition: all 0.5s var(--ease-out-expo); display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 2rem; }
+    .menu-overlay.menu-active { opacity: 1; pointer-events: auto; }
+</style>
 </head>
+<body class="bg-surface-container-lowest text-on-background font-body selection:bg-gold-premium selection:text-white">
 
-<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary antialiased">
-    <!-- Custom UI Overlays -->
-    <div class="grain"></div>
-    <div id="cursor-follower">
-        <div id="cursor-dot"></div>
-    </div>
-    <div class="scroll-progress hidden md:block">
-        <div class="progress-bar" id="progress"></div>
-    </div>
-    <div class="geometry-container">
-        <div class="monolith-block block-1" id="m1"></div>
-        <div class="monolith-block block-2" id="m2"></div>
-    </div>
+<div class="grain"></div>
+<div id="cursor-follower"></div>
 
-
-<!-- TopNavBar -->
-<nav class="fixed top-6 w-[95%] lg:w-[92%] max-w-[1400px] left-1/2 -translate-x-1/2 z-50 glass-panel rounded-2xl transition-all duration-500">
-    <div class="flex justify-between items-center px-8 lg:px-12 py-4 w-full mx-auto">
-        <a href="index.html" class="interactive group flex items-center gap-3">
-            <div class="relative w-12 h-12 flex items-center justify-center bg-white/5 rounded-xl border border-white/10 group-hover:border-primary/50 transition-all">
-                <img src="LOGOS/customcolor/icon/customcolor_icon_transparent_background.png" alt="M" class="h-8 w-auto transition-transform duration-500 group-hover:scale-110" style="filter: brightness(0) invert(1);">
-            </div>
-            <div class="hidden sm:block">
-                <div class="text-lg font-black tracking-tighter text-white leading-none">MORAES</div>
-                <div class="text-[10px] font-bold text-primary tracking-[0.2em] mt-1">ENGENHARIA</div>
+<!-- Nav -->
+<nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] lg:w-[90%] max-w-[1400px] z-[100] glass-panel rounded-sm">
+    <div class="flex justify-between items-center px-6 lg:px-10 py-5">
+        <a href="index.html" class="flex items-center gap-4 interactive">
+            <img src="LOGOS/customcolor/icon/customcolor_icon_transparent_background.png" alt="M" class="h-8 w-auto invert brightness-0">
+            <div>
+                <div class="text-xl font-black tracking-[0.4em] text-white font-headline leading-none">MORAES</div>
+                <div class="text-[8px] font-bold text-gold-premium tracking-[0.3em] mt-1 uppercase">Engenharia</div>
             </div>
         </a>
-
-        <!-- Mobile Menu Button -->
-        <button id="mobile-menu-btn" class="md:hidden text-white">
-            <span class="material-symbols-outlined text-3xl">menu</span>
-        </button>
-
-        <div class="hidden md:flex items-center gap-8">
-            <a class="font-headline uppercase tracking-tighter text-sm font-bold text-white hover:text-[#ffbe46] transition-colors nav-link-home" href="index.html">Home</a>
-            <a class="font-headline uppercase tracking-tighter text-sm font-bold text-white hover:text-[#ffbe46] transition-colors nav-link-sobre" href="sobre.html">Sobre</a>
-            <a class="font-headline uppercase tracking-tighter text-sm font-bold text-white hover:text-[#ffbe46] transition-colors nav-link-servicos" href="servicos.html">Serviços</a>
-            <a class="font-headline uppercase tracking-tighter text-sm font-bold text-white hover:text-[#ffbe46] transition-colors nav-link-portfolio" href="portfolio.html">Portfólio</a>
-            <a class="font-headline uppercase tracking-tighter text-sm font-bold text-[#ffbe46] border-b-2 border-[#ffbe46] nav-link-contato" href="contato.html">Contato</a>
+        <div class="hidden lg:flex gap-12 items-center">
+            <a class="font-headline uppercase tracking-[0.3em] text-[10px] font-bold text-white/50 hover:text-white transition-all interactive" href="index.html">Home</a>
+            <a class="font-headline uppercase tracking-[0.3em] text-[10px] font-bold text-white/50 hover:text-white transition-all interactive" href="sobre.html">Sobre</a>
+            <a class="font-headline uppercase tracking-[0.3em] text-[10px] font-bold text-white/50 hover:text-white transition-all interactive" href="servicos.html">Serviços</a>
+            <a class="font-headline uppercase tracking-[0.3em] text-[10px] font-bold text-white/50 hover:text-white transition-all interactive" href="portfolio.html">Portfólio</a>
+            <a class="font-headline uppercase tracking-[0.3em] text-[10px] font-bold text-gold-premium transition-all interactive" href="contato.html">Contato</a>
         </div>
-        <a href="contato.html" class="hidden md:inline-flex interactive brushed-gold text-on-primary px-6 py-2 font-headline uppercase tracking-tighter text-sm font-bold scale-95 hover:scale-100 transition-transform hover:opacity-90">
-            Fale Conosco
+        <button class="lg:hidden text-white flex items-center justify-center p-2 z-[101] interactive" id="mobile-menu-btn">
+            <span class="material-symbols-outlined text-3xl" id="menu-icon">menu</span>
+        </button>
+        <a class="hidden lg:flex group relative items-center gap-3 border border-white/10 px-8 py-3 font-headline font-bold uppercase tracking-[0.3em] text-[9px] hover:border-gold-premium/50 transition-all interactive" href="contato.html">
+            <span class="relative z-10 text-white">Fale Conosco</span>
+            <div class="absolute inset-0 bg-white/5 translate-y-full group-hover:translate-y-0 transition-transform"></div>
         </a>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden absolute top-full mt-2 left-0 w-full bg-[#131313]/95 backdrop-blur-xl border border-white/10 rounded-b-md py-4 px-6 flex-col gap-4 shadow-xl">
-        <a class="font-headline uppercase tracking-tighter text-sm font-bold text-white hover:text-[#ffbe46] nav-link-home" href="index.html">Home</a>
-        <a class="font-headline uppercase tracking-tighter text-sm font-bold text-white hover:text-[#ffbe46] nav-link-sobre" href="sobre.html">Sobre</a>
-        <a class="font-headline uppercase tracking-tighter text-sm font-bold text-white hover:text-[#ffbe46] nav-link-servicos" href="servicos.html">Serviços</a>
-        <a class="font-headline uppercase tracking-tighter text-sm font-bold text-white hover:text-[#ffbe46] nav-link-portfolio" href="portfolio.html">Portfólio</a>
-        <a class="font-headline uppercase tracking-tighter text-sm font-bold text-[#ffbe46] nav-link-contato" href="contato.html">Contato</a>
     </div>
 </nav>
 
-<script>
-    document.getElementById('mobile-menu-btn')?.addEventListener('click', function() {
-        const menu = document.getElementById('mobile-menu');
-        if(menu) {
-            menu.classList.toggle('hidden');
-            menu.classList.toggle('flex');
-        }
-    });
-</script>
+<div class="menu-overlay" id="mobile-menu">
+    <a href="index.html" class="font-headline text-2xl uppercase tracking-[0.3em] text-white hover:text-gold-premium font-bold interactive mt-4">Home</a>
+    <a href="sobre.html" class="font-headline text-2xl uppercase tracking-[0.3em] text-white hover:text-gold-premium font-bold interactive mt-4">Sobre</a>
+    <a href="servicos.html" class="font-headline text-2xl uppercase tracking-[0.3em] text-white hover:text-gold-premium font-bold interactive mt-4">Serviços</a>
+    <a href="portfolio.html" class="font-headline text-2xl uppercase tracking-[0.3em] text-white hover:text-gold-premium font-bold interactive mt-4">Portfólio</a>
+    <a href="contato.html" class="font-headline text-2xl uppercase tracking-[0.3em] text-gold-premium font-bold interactive mt-4">Contato</a>
+</div>
 
-<main class='pt-32 pb-24 min-h-screen flex flex-col justify-center hero-gradient'>
-<section id="contato" class="py-24 px-6 lg:px-12 bg-transparent relative z-10">
-        <div class="max-w-[1400px] mx-auto monolith-content">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                <!-- Direto ao ponto CTA -->
-                <div class="space-y-8">
-                    <span class="text-primary font-headline font-bold uppercase tracking-[0.3em] text-xs">Fale Conosco</span>
-                    <h2 class="text-4xl md:text-6xl font-headline font-extrabold tracking-tighter text-white">
-                        Pronto para viabilizar seu próximo projeto?
+<main class="pt-48 pb-32">
+    <!-- Contact Section -->
+    <section class="z-10 relative">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-32">
+                <div class="reveal-up">
+                    <div class="section-label mb-8">04 // PROPOSTA</div>
+                    <h2 class="font-headline text-5xl md:text-7xl font-black tracking-[-0.04em] uppercase text-white mb-16 leading-[1.0]">
+                        Acelere seu <br/> <span class="text-gold-premium italic font-light">Investimento</span>.
                     </h2>
-                    <p class="text-on-surface-variant text-xl">
-                        Nossa equipe técnica atende investidores e tomadores de decisão via WhatsApp ou telefone. Agilidade e competência desde o primeiro contato.
+                    <p class="text-on-surface-variant text-lg md:text-xl mb-16 md:mb-24 max-w-md font-light leading-relaxed">
+                        Decisões rápidas constroem impérios. Solicite uma consultoria com nosso time técnico em SP ou RJ.
                     </p>
-
-                    <div class="pt-8 flex flex-col gap-6">
-                        <a href="https://wa.me/5521981776680" target="_blank" class="brushed-gold flex items-center justify-between p-6 rounded-sm w-full max-w-md group hover:scale-[1.02] transition-transform">
-                            <div class="flex items-center gap-4 text-on-primary">
-                                <span class="material-symbols-outlined text-4xl">chat</span>
-                                <div>
-                                    <div class="font-headline font-bold uppercase tracking-tighter text-sm">Fale pelo WhatsApp</div>
-                                    <div class="font-headline font-black text-2xl">(21) 98177-6680</div>
-                                </div>
-                            </div>
-                            <span class="material-symbols-outlined text-on-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
-                        </a>
-
-                        <div class="flex items-center gap-4 text-white p-6 border border-white/10 w-full max-w-md bg-surface-container-low">
-                            <span class="material-symbols-outlined text-3xl text-primary">mail</span>
+                    <div class="space-y-12">
+                        <div class="flex items-start gap-8">
+                            <span class="material-symbols-outlined text-gold-premium text-3xl">location_on</span>
                             <div>
-                                <div class="text-on-surface-variant uppercase text-xs tracking-widest font-bold">E-mail Oficial</div>
-                                <div class="font-headline text-lg font-bold">contato@moraesengenharia.com</div>
+                                <h4 class="text-white font-headline font-bold uppercase text-[10px] tracking-[0.4em] mb-4">Sede Administrativa</h4>
+                                <p class="text-on-surface-variant/70 text-xs tracking-widest font-light uppercase leading-loose">
+                                    Rua Boa Vista, 254 — Sala 1516<br>Centro Histórico, São Paulo - SP
+                                </p>
                             </div>
                         </div>
-                        
-                        <div class="flex items-center gap-4 text-white p-6 border border-white/10 w-full max-w-md bg-surface-container-low">
-                            <span class="material-symbols-outlined text-3xl text-primary">location_on</span>
+                        <div class="flex items-start gap-8">
+                            <span class="material-symbols-outlined text-gold-premium text-3xl">mail</span>
                             <div>
-                                <div class="text-on-surface-variant uppercase text-xs tracking-widest font-bold">Escritório Central</div>
-                                <div class="font-headline text-sm font-bold">Rua Boa Vista, 254 — Sala 1516<br>Centro Histórico de São Paulo, SP</div>
+                                <h4 class="text-white font-headline font-bold uppercase text-[10px] tracking-[0.4em] mb-4">Contato Corporativo</h4>
+                                <p class="text-on-surface-variant/70 text-xs tracking-widest font-light uppercase">contato@moraesengenharia.com</p>
                             </div>
+                        </div>
+                        <div class="pt-6">
+                            <a class="group relative inline-flex items-center gap-6 glass-panel px-10 md:px-16 py-6 md:py-8 text-white font-headline font-extrabold uppercase tracking-[0.4em] text-[8px] md:text-[10px] interactive overflow-hidden" href="https://wa.me/5521981776680" target="_blank">
+                                <span class="relative z-10 text-gold-premium font-bold text-lg md:text-xl">(21) 98177-6680</span>
+                                <span class="relative z-10 text-white border-l border-white/20 pl-6">Concierge WhatsApp</span>
+                                <div class="absolute inset-0 bg-white/5 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+                            </a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Formulario -->
-                <div class="glass-panel p-8 md:p-12 rounded-2xl relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none"></div>
-                    <h3 class="text-2xl font-headline font-bold text-white mb-6 relative z-10">Envie os detalhes da obra</h3>
-                    <form class="space-y-6 relative z-10">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-on-surface-variant text-xs font-bold mb-2 uppercase tracking-widest">Nome / Empresa</label>
-                                <input type="text" class="w-full bg-black/40 border border-white/10 rounded-xl p-4 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-white/20" placeholder="Seu nome">
-                            </div>
-                            <div>
-                                <label class="block text-on-surface-variant text-xs font-bold mb-2 uppercase tracking-widest">Telefone / WhatsApp</label>
-                                <input type="text" class="w-full bg-black/40 border border-white/10 rounded-xl p-4 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-white/20" placeholder="(11) 90000-0000">
-                            </div>
+                
+                <div class="glass-panel p-8 md:p-16 shadow-2xl reveal-up" style="transition-delay: 200ms;">
+                    <form class="space-y-8 md:space-y-12" action="https://formspree.io/f/placeholder" method="POST">
+                        <div class="space-y-4">
+                            <label class="font-mono text-[9px] uppercase tracking-[0.4em] text-gold-premium font-bold">Nome Completo</label>
+                            <input class="w-full bg-transparent border-0 border-b border-white/10 focus:border-gold-premium focus:ring-0 text-white py-4 md:py-6 transition-all placeholder-white/5" placeholder="SEU NOME" type="text" name="name" required/>
                         </div>
-                        <div>
-                            <label class="block text-on-surface-variant text-xs font-bold mb-2 uppercase tracking-widest">Email</label>
-                            <input type="email" class="w-full bg-black/40 border border-white/10 rounded-xl p-4 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-white/20" placeholder="email@empresa.com">
+                        <div class="space-y-4">
+                            <label class="font-mono text-[9px] uppercase tracking-[0.4em] text-gold-premium font-bold">E-mail Corporativo</label>
+                            <input class="w-full bg-transparent border-0 border-b border-white/10 focus:border-gold-premium focus:ring-0 text-white py-4 md:py-6 transition-all placeholder-white/5" placeholder="SEU EMAIL" type="email" name="email" required/>
                         </div>
-                        <div>
-                            <label class="block text-on-surface-variant text-xs font-bold mb-2 uppercase tracking-widest">Detalhes do Projeto</label>
-                            <textarea rows="4" class="w-full bg-black/40 border border-white/10 rounded-xl p-4 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-white/20" placeholder="Descreva brevemente o projeto (tamanho, localização, tipo de serviço)"></textarea>
+                        <div class="space-y-4">
+                            <label class="font-mono text-[9px] uppercase tracking-[0.4em] text-gold-premium font-bold">Mensagem Técnica</label>
+                            <textarea class="w-full bg-transparent border-0 border-b border-white/10 focus:border-gold-premium focus:ring-0 text-white py-4 md:py-6 transition-all placeholder-white/5" placeholder="ESCOPO DO PROJETO..." rows="3" name="message" required></textarea>
                         </div>
-                        <button type="button" class="interactive bg-white text-background w-full py-5 rounded-xl font-headline font-bold uppercase tracking-tighter hover:bg-primary transition-colors">
-                            Enviar Solicitação
+                        <button class="w-full gold-gradient text-white font-headline font-bold py-6 md:py-8 uppercase tracking-[0.4em] text-[9px] md:text-[11px] hover:shadow-[0_20px_60px_rgba(229,161,0,0.2)] transition-all duration-700 interactive" type="submit">
+                            Solicitar Proposta
                         </button>
                     </form>
                 </div>
@@ -276,156 +157,59 @@
         </div>
     </section>
 </main>
-<!-- Footer -->
-<footer class="bg-surface-container-lowest w-full border-t border-white/5 relative z-10">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-16 px-8 lg:px-12 py-20 w-full max-w-[1400px] mx-auto">
-        <div class="space-y-6">
-            <a href="index.html" class="inline-flex items-center gap-3">
-                <div class="w-12 h-12 flex items-center justify-center bg-white/5 rounded-xl border border-white/10">
-                    <img src="LOGOS/customcolor/icon/customcolor_icon_transparent_background.png" alt="M" class="h-8 w-auto" style="filter: brightness(0) invert(1);">
-                </div>
-                <div>
-                    <div class="text-xl font-black tracking-tighter text-white leading-none">MORAES</div>
-                    <div class="text-[10px] font-bold text-primary tracking-[0.2em] mt-1 uppercase">Engenharia</div>
-                </div>
-            </a>
-            <p class="font-body text-sm leading-relaxed text-on-surface-variant max-w-xs">
-                Construções comerciais de alto padrão em São Paulo e Rio de Janeiro.
+
+<footer class="bg-surface-container-lowest border-t border-white/5 z-10 relative">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-24 px-6 md:px-16 py-16 md:py-24 w-full max-w-[1400px] mx-auto">
+        <div>
+            <div class="text-2xl font-black text-white mb-8 font-headline uppercase tracking-[0.4em] interactive">MORAES</div>
+            <p class="font-body text-[10px] tracking-[0.3em] uppercase text-white/30 max-w-xs leading-loose">
+                Engenharia de precisão para investidores institucionais. Construindo com absoluta segurança.
             </p>
         </div>
-        <div class="flex flex-col gap-4">
-            <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-4">Navegação</h4>
-            <a class="text-neutral-500 hover:text-[#ffbe46] transition-colors font-body text-sm" href="index.html">Início</a>
-            <a class="text-neutral-500 hover:text-[#ffbe46] transition-colors font-body text-sm" href="sobre.html">Sobre</a>
-            <a class="text-neutral-500 hover:text-[#ffbe46] transition-colors font-body text-sm" href="servicos.html">Serviços</a>
-            <a class="text-neutral-500 hover:text-[#ffbe46] transition-colors font-body text-sm" href="portfolio.html">Obras</a>
-            <a class="text-neutral-500 hover:text-[#ffbe46] transition-colors font-body text-sm" href="contato.html">Contato</a>
+        <div class="flex flex-col gap-6 md:gap-8">
+            <h4 class="text-gold-premium font-headline font-bold text-[9px] uppercase tracking-[0.5em] mb-2 md:mb-4">Presença Digital</h4>
+            <a class="text-white/40 hover:text-white transition-all font-headline text-[10px] tracking-[0.4em] uppercase interactive" href="https://instagram.com/lucasimas__" target="_blank">Instagram</a>
+            <a class="text-white/40 hover:text-white transition-all font-headline text-[10px] tracking-[0.4em] uppercase interactive" href="#">LinkedIn</a>
         </div>
-        <div class="flex flex-col gap-4">
-            <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-4">Contato Oficial</h4>
-            <a class="text-neutral-500 hover:text-[#ffbe46] transition-colors font-body text-sm flex items-center gap-2" href="https://wa.me/5521981776680" target="_blank">
-                <span class="material-symbols-outlined text-sm">chat</span> (21) 98177-6680
-            </a>
-            <a class="text-neutral-500 hover:text-[#ffbe46] transition-colors font-body text-sm flex items-center gap-2" href="mailto:contato@moraesengenharia.com">
-                <span class="material-symbols-outlined text-sm">mail</span> contato@moraesengenharia.com
-            </a>
-            <div class="text-neutral-500 font-body text-sm flex items-start gap-2 mt-2">
-                <span class="material-symbols-outlined text-sm mt-0.5">location_on</span> 
-                <span>Rua Boa Vista, 254 — Sala 1516<br>Centro Histórico de São Paulo — SP</span>
-            </div>
-            <div class="text-neutral-500 font-body text-sm flex items-center gap-2 mt-2">
-                <span class="material-symbols-outlined text-sm">link</span> @lucasimas__
-            </div>
-
-            <div class="mt-8 pt-8 border-t border-white/5 space-y-2">
-                <p class="font-body text-[10px] tracking-wide text-neutral-600">CREA-SP 2884830 | LS Moraes Serviços em Engenharia Ltda | CNPJ 47.457.237/0001-60</p>
-                <p class="font-body text-xs tracking-wide text-neutral-600">© 2026 Moraes Engenharia. Todos os direitos reservados.</p>
-            </div>
+        <div class="flex flex-col gap-6 md:gap-8">
+            <h4 class="text-gold-premium font-headline font-bold text-[9px] uppercase tracking-[0.5em] mb-2 md:mb-4">Governança</h4>
+            <p class="font-body text-[9px] tracking-[0.3em] uppercase text-white/20 leading-loose">© 2026 Moraes Engenharia.<br/>Todos os direitos reservados.</p>
         </div>
     </div>
 </footer>
 
 <script>
-    const cursor = document.getElementById('cursor-follower');
-    const progress = document.getElementById('progress');
-    const m1 = document.getElementById('m1');
-    const m2 = document.getElementById('m2');
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const menuOverlay = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
     
-    let mouseX = 0, mouseY = 0;
-    let posX = 0, posY = 0;
-
-    // Custom Cursor Movement
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
+    menuBtn.addEventListener('click', () => {
+        const isActive = menuOverlay.classList.toggle('menu-active');
+        menuIcon.textContent = isActive ? 'close' : 'menu';
     });
 
-    function updateCursor() {
-        posX += (mouseX - posX) * 0.15;
-        posY += (mouseY - posY) * 0.15;
-        
-        if (cursor) {
-            cursor.style.transform = `translate3d(${posX - 20}px, ${posY - 20}px, 0)`;
-        }
-        
-        // Subtle Parallax for blocks
-        const moveX = (mouseX - window.innerWidth / 2) * 0.01;
-        const moveY = (mouseY - window.innerHeight / 2) * 0.01;
-        if (m1 && m2) {
-            m1.style.transform = `translate3d(${moveX * 2}px, ${moveY * 2}px, 0)`;
-            m2.style.transform = `translate3d(${-moveX * 4}px, ${-moveY * 4}px, 0)`;
-        }
-
-        requestAnimationFrame(updateCursor);
+    const cursor = document.getElementById('cursor-follower');
+    let mouseX = 0, mouseY = 0, posX = 0, posY = 0;
+    document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
+    function updateFrame() {
+        posX += (mouseX - posX) * 0.12; posY += (mouseY - posY) * 0.12;
+        if(cursor) cursor.style.transform = `translate3d(${posX - 16}px, ${posY - 16}px, 0)`;
+        requestAnimationFrame(updateFrame);
     }
-    updateCursor();
+    updateFrame();
 
-    // Hover effect for interactive elements
-    document.querySelectorAll('a, button, input, textarea, .interactive, .cursor-pointer').forEach(el => {
-        el.addEventListener('mouseenter', () => document.body.classList.add('cursor-active'));
-        el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-active'));
+    document.querySelectorAll('.interactive').forEach(el => {
+        el.addEventListener('mouseenter', () => document.body?.classList.add('cursor-active'));
+        el.addEventListener('mouseleave', () => document.body?.classList.remove('cursor-active'));
     });
 
-    // Scroll Logic
-    window.addEventListener('scroll', () => {
-        const totalHeight = document.body.scrollHeight - window.innerHeight;
-        const scrollPercent = (window.scrollY / totalHeight) * 100;
-        if (progress) progress.style.height = `${scrollPercent}%`;
-
-        // Reveal animations on scroll
-        document.querySelectorAll('.monolith-content').forEach(el => {
-            const rect = el.getBoundingClientRect();
-            if(rect.top < window.innerHeight * 0.85) {
-                el.classList.add('visible');
-            }
+    const revealOnScroll = () => {
+        document.querySelectorAll('.reveal-up').forEach(el => {
+            if (el.getBoundingClientRect().top < window.innerHeight * 0.85) el.classList.add('visible');
         });
-
-        // Parallax shift for geometry
-        const scrollVal = window.scrollY;
-        if (m1) m1.style.top = (20 - scrollVal * 0.05) + '%';
-        if (m2) m2.style.top = (60 - scrollVal * 0.02) + '%';
-    });
-
-    // Number Counter Animation
-    const counters = document.querySelectorAll('.counter');
-    let counted = false;
-
-    window.addEventListener('scroll', () => {
-        if(counted || counters.length === 0) return;
-        const sobreSection = document.getElementById('sobre');
-        if(!sobreSection) return;
-        
-        const oTop = sobreSection.offsetTop - window.innerHeight + 100;
-        if (window.scrollY > oTop) {
-            counters.forEach(counter => {
-                const target = +counter.getAttribute('data-target');
-                const duration = 2000;
-                const step = target / (duration / 16); 
-                let current = 0;
-
-                const updateCounter = () => {
-                    current += step;
-                    if (current < target) {
-                        counter.innerText = Math.ceil(current);
-                        requestAnimationFrame(updateCounter);
-                    } else {
-                        counter.innerText = target;
-                    }
-                };
-                updateCounter();
-            });
-            counted = true;
-        }
-    });
-
-    // Smooth entry reveal
-    window.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('.monolith-content').forEach((el, index) => {
-            if(index === 0) el.classList.add('visible');
-        });
-    });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
 </script>
-
-
 </body>
 </html>
