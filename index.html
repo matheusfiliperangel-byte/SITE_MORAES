@@ -194,17 +194,27 @@ tailwind.config = {
 
 <main>
 <!-- Hero -->
-<section class="relative min-h-screen flex items-center pt-40 z-10 overflow-hidden">
-    <!-- Video Background -->
-    <div class="absolute inset-0 w-full h-full z-0 pointer-events-none">
-        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
-            <source src="IMAGENS/LOOP_SITE.mp4" type="video/mp4">
-        </video>
-        <!-- Gradient Overlay -->
-        <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(5, 5, 5, 0.7), rgba(5, 5, 5, 1));"></div>
-    </div>
-    <div class="max-w-[1400px] mx-auto px-6 md:px-16 w-full grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative z-10">
-        <div class="lg:col-span-9 reveal-up">
+<section class="relative h-[200vh] z-10" id="hero-section">
+    <!-- Sticky Container -->
+    <div class="sticky top-0 h-screen w-full flex items-center pt-20 sm:pt-40 overflow-hidden">
+        <!-- Video Background -->
+        <div class="absolute inset-0 w-full h-full z-0 pointer-events-none">
+            <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
+                <source src="IMAGENS/LOOP_SITE.mp4" type="video/mp4">
+            </video>
+            <!-- Gradient Overlay -->
+            <div id="hero-overlay" class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(5, 5, 5, 0.7), rgba(5, 5, 5, 1)); opacity: 0; will-change: opacity;"></div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div id="scroll-indicator" class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 z-10" style="opacity: 1; will-change: opacity;">
+            <span class="text-white/70 font-mono text-[9px] uppercase tracking-[0.4em] drop-shadow-md">Role para baixo</span>
+            <div class="w-[1px] h-12 bg-gradient-to-b from-white to-transparent animate-pulse"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div id="hero-content" class="max-w-[1400px] mx-auto px-6 md:px-16 w-full grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative z-10" style="opacity: 0; transform: translateY(40px); will-change: opacity, transform;">
+            <div class="lg:col-span-9">
             <div class="section-label mb-8 md:mb-12">CONSTRUÇÕES DE ALTO PADRÃO</div>
             <h1 class="font-headline text-4xl sm:text-6xl md:text-8xl lg:text-[110px] font-extrabold tracking-[-0.05em] leading-[0.9] text-white uppercase mb-12 sm:mb-16">
                 Nós não entregamos obras. <br class="hidden sm:block"/> <span class="text-gold-premium italic font-light tracking-tight">Entregamos Confiança</span>.
@@ -243,7 +253,7 @@ tailwind.config = {
                 </div>
             </div>
         </div>
-        <div class="hidden lg:block lg:col-span-3 pb-20 reveal-up" style="transition-delay: 200ms;">
+        <div class="hidden lg:block lg:col-span-3 pb-20" style="transition-delay: 200ms;">
             <div class="glass-panel p-8 md:p-10 border-l-2 border-gold-premium relative group flex flex-col gap-8">
                 <div>
                     <span class="text-gold-premium font-headline font-light text-5xl xl:text-6xl block mb-2 tracking-tighter"><span class="count-up" data-target="8">0</span><span class="text-2xl align-top">+</span></span>
@@ -263,6 +273,7 @@ tailwind.config = {
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </section>
 
@@ -457,8 +468,26 @@ tailwind.config = {
         el.addEventListener('mouseleave', () => document.body?.classList.remove('cursor-active'));
     });
 
+    const heroOverlay = document.getElementById('hero-overlay');
+    const heroContent = document.getElementById('hero-content');
+    const scrollIndicator = document.getElementById('scroll-indicator');
+
     const revealOnScroll = () => {
         const scrollVal = window.scrollY;
+
+        // Hero Scrollytelling
+        if (heroOverlay && heroContent) {
+            const progress = Math.min(scrollVal / (window.innerHeight * 0.7), 1);
+            
+            heroOverlay.style.opacity = progress;
+            heroContent.style.opacity = progress;
+            heroContent.style.transform = `translateY(${(1 - progress) * 40}px)`;
+            
+            if (scrollIndicator) {
+                scrollIndicator.style.opacity = Math.max(1 - (progress * 3), 0);
+            }
+        }
+
         if(k1) k1.style.top = (15 - scrollVal * 0.03) + '%';
         if(k2) k2.style.top = (70 - scrollVal * 0.01) + '%';
 
