@@ -116,43 +116,68 @@ tailwind.config = {
             <!-- Obras - Portfólio Detalhado -->
             <div class="flex flex-col gap-24 md:gap-32 mt-16">
                 
-                <!-- Obra 1 -->
-                <div class="interactive reveal-up">
+                <!-- Obra 1 - Cubatão -->
+                <div class="interactive reveal-up" id="obra-cubatao">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                         <div class="lg:col-span-5 order-2 lg:order-1">
-                            <span class="text-gold-premium font-mono text-[11px] uppercase tracking-[0.5em] block mb-4 border-l border-gold-premium/50 pl-4">São Paulo, SP</span>
-                            <h3 class="text-white text-3xl lg:text-4xl xl:text-5xl font-black uppercase tracking-tight mb-6 leading-[1.1]">Complexo Logístico Rodoanel</h3>
+                            <span class="text-gold-premium font-mono text-[11px] uppercase tracking-[0.5em] block mb-4 border-l border-gold-premium/50 pl-4">Cubatão, SP</span>
+                            <h3 class="text-white text-3xl lg:text-4xl xl:text-5xl font-black uppercase tracking-tight mb-6 leading-[1.1]">Restauro Antiga Sede Associação de Socorros Mútuos</h3>
                             
                             <div class="flex gap-8 mb-6 border-y border-white/10 py-5 mt-6">
                                 <div>
                                     <span class="block text-white/40 text-[10px] font-mono tracking-[0.2em] uppercase mb-1">Área Total</span>
-                                    <span class="text-white text-sm lg:text-base font-headline tracking-widest font-bold">12.500 m²</span>
+                                    <span class="text-white text-sm lg:text-base font-headline tracking-widest font-bold">194,70 m²</span>
                                 </div>
                                 <div>
                                     <span class="block text-white/40 text-[10px] font-mono tracking-[0.2em] uppercase mb-1">Duração</span>
-                                    <span class="text-white text-sm lg:text-base font-headline tracking-widest font-bold">14 Meses</span>
+                                    <span class="text-white text-sm lg:text-base font-headline tracking-widest font-bold">11 Meses e 18 Dias</span>
                                 </div>
                             </div>
                             
                             <p class="text-white/60 text-sm md:text-base font-light leading-relaxed mb-6">
-                                Projeto logístico de alta performance desenvolvido com foco na otimização do fluxo operacional. A intervenção englobou implantação de pátio para suportar tráfego pesado, área de docas com precisão estrutural e escritórios administrativos com padrão premium. Processo de execução acelerado para atender o cronograma rigoroso do fundo investidor.
+                                Projeto de restauro e requalificação desenvolvido com foco na preservação histórica e valorização arquitetônica do imóvel. A intervenção contemplou a recuperação de elementos originais da edificação, adequações estruturais e adaptação dos ambientes para novos usos, mantendo a integridade do patrimônio cultural e reforçando a memória urbana da cidade.
                             </p>
                         </div>
                         
-                        <div class="lg:col-span-7 order-1 lg:order-2 grid grid-cols-2 gap-2 sm:gap-4">
-                            <div class="group relative overflow-hidden parallax-wrap aspect-[4/5] sm:aspect-square">
-                                <img alt="Antes - Complexo Rodoanel" class="parallax-img w-full h-full object-cover object-center md:grayscale md:brightness-50 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-1000" src="https://images.unsplash.com/photo-1541888086225-f6740f9e8026?auto=format&fit=crop&q=80&w=800">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-                                <div class="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 bg-black/40 backdrop-blur-md border border-white/10 px-3 py-1.5 sm:px-4 sm:py-2 rounded-sm">
+                        <div class="lg:col-span-7 order-1 lg:order-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <!-- Slider Antes -->
+                            <div class="relative group aspect-[4/5] sm:aspect-square overflow-hidden bg-black/50 border border-white/5 rounded-sm" id="slider-antes">
+                                <img src="IMAGENS/portfolio/cubatao/antes/1.jpeg" class="w-full h-full object-cover slider-img transition-opacity duration-500" alt="Antes" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none z-10"></div>
+                                <div class="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 bg-black/40 backdrop-blur-md border border-white/10 px-3 py-1.5 sm:px-4 sm:py-2 rounded-sm pointer-events-none z-20">
                                     <span class="text-white/80 text-[9px] sm:text-[11px] font-mono tracking-[0.3em] uppercase">Antes</span>
                                 </div>
+                                
+                                <!-- Navigation -->
+                                <button class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-gold-premium text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all z-30 prev-btn cursor-pointer">
+                                    <span class="material-symbols-outlined">chevron_left</span>
+                                </button>
+                                <button class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-gold-premium text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all z-30 next-btn cursor-pointer">
+                                    <span class="material-symbols-outlined">chevron_right</span>
+                                </button>
+                                <button class="absolute top-4 right-4 bg-black/50 hover:bg-gold-premium text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all z-30 fullscreen-btn cursor-pointer">
+                                    <span class="material-symbols-outlined text-sm">fullscreen</span>
+                                </button>
                             </div>
-                            <div class="group relative overflow-hidden parallax-wrap aspect-[4/5] sm:aspect-square" style="transition-delay: 100ms;">
-                                <img alt="Depois - Complexo Rodoanel" class="parallax-img w-full h-full object-cover object-center md:grayscale md:brightness-50 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-1000" src="https://images.unsplash.com/photo-1504307651254-35680f356f67?auto=format&fit=crop&q=80&w=800">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-                                <div class="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 bg-gold-premium/20 backdrop-blur-md border border-gold-premium/30 px-3 py-1.5 sm:px-4 sm:py-2 rounded-sm">
+
+                            <!-- Slider Depois -->
+                            <div class="relative group aspect-[4/5] sm:aspect-square overflow-hidden bg-black/50 border border-white/5 rounded-sm" id="slider-depois">
+                                <img src="IMAGENS/portfolio/cubatao/depois/1.jpeg" class="w-full h-full object-cover slider-img transition-opacity duration-500" alt="Depois" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none z-10"></div>
+                                <div class="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 bg-gold-premium/20 backdrop-blur-md border border-gold-premium/30 px-3 py-1.5 sm:px-4 sm:py-2 rounded-sm pointer-events-none z-20">
                                     <span class="text-gold-premium text-[9px] sm:text-[11px] font-mono tracking-[0.3em] uppercase font-bold">Depois</span>
                                 </div>
+                                
+                                <!-- Navigation -->
+                                <button class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-gold-premium text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all z-30 prev-btn cursor-pointer">
+                                    <span class="material-symbols-outlined">chevron_left</span>
+                                </button>
+                                <button class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-gold-premium text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all z-30 next-btn cursor-pointer">
+                                    <span class="material-symbols-outlined">chevron_right</span>
+                                </button>
+                                <button class="absolute top-4 right-4 bg-black/50 hover:bg-gold-premium text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all z-30 fullscreen-btn cursor-pointer">
+                                    <span class="material-symbols-outlined text-sm">fullscreen</span>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -333,6 +358,26 @@ tailwind.config = {
     </div>
 </footer>
 
+<!-- Fullscreen Modal -->
+<div id="fullscreen-modal" class="fixed inset-0 z-[200] bg-black/95 backdrop-blur-xl opacity-0 pointer-events-none transition-opacity duration-500 flex items-center justify-center">
+    <button id="close-modal" class="absolute top-6 right-6 text-white/50 hover:text-white z-50 p-2 cursor-pointer">
+        <span class="material-symbols-outlined text-4xl">close</span>
+    </button>
+    
+    <div class="relative w-full max-w-6xl mx-auto px-4 h-[80vh] flex items-center justify-center">
+        <img id="modal-img" src="" class="max-h-full max-w-full object-contain shadow-2xl transition-opacity duration-300" alt="Fullscreen Image">
+        
+        <button id="modal-prev" class="absolute left-4 sm:left-10 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-gold-premium text-white p-4 rounded-full transition-all cursor-pointer">
+            <span class="material-symbols-outlined text-3xl">chevron_left</span>
+        </button>
+        <button id="modal-next" class="absolute right-4 sm:right-10 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-gold-premium text-white p-4 rounded-full transition-all cursor-pointer">
+            <span class="material-symbols-outlined text-3xl">chevron_right</span>
+        </button>
+        
+        <div id="modal-counter" class="absolute bottom-[-40px] left-1/2 -translate-x-1/2 text-white/50 font-mono text-sm tracking-[0.2em]">1 / 10</div>
+    </div>
+</div>
+
 <script>
     const menuBtn = document.getElementById('mobile-menu-btn');
     const menuOverlay = document.getElementById('mobile-menu');
@@ -365,6 +410,133 @@ tailwind.config = {
     };
     window.addEventListener('scroll', revealOnScroll);
     window.addEventListener('load', revealOnScroll);
+
+    // --- Carousels Logic ---
+    const imagesAntes = [
+        'IMAGENS/portfolio/cubatao/antes/1.jpeg',
+        'IMAGENS/portfolio/cubatao/antes/2.jpeg',
+        'IMAGENS/portfolio/cubatao/antes/5.jpeg',
+        'IMAGENS/portfolio/cubatao/antes/WhatsApp Image 2026-04-30 at 11.47.44 (3).jpeg',
+        'IMAGENS/portfolio/cubatao/antes/WhatsApp Image 2026-04-30 at 11.47.44 (5).jpeg',
+        'IMAGENS/portfolio/cubatao/antes/WhatsApp Image 2026-04-30 at 11.47.46 (1).jpeg',
+        'IMAGENS/portfolio/cubatao/antes/WhatsApp Image 2026-04-30 at 11.47.46 (2).jpeg',
+        'IMAGENS/portfolio/cubatao/antes/WhatsApp Image 2026-04-30 at 11.47.46 (3).jpeg',
+        'IMAGENS/portfolio/cubatao/antes/WhatsApp Image 2026-04-30 at 11.47.46 (5).jpeg'
+    ];
+
+    const imagesDepois = [
+        'IMAGENS/portfolio/cubatao/depois/1.jpeg',
+        'IMAGENS/portfolio/cubatao/depois/WhatsApp Image 2026-04-29 at 16.16.16.jpeg',
+        'IMAGENS/portfolio/cubatao/depois/WhatsApp Image 2026-04-30 at 11.47.44 (14).jpeg',
+        'IMAGENS/portfolio/cubatao/depois/WhatsApp Image 2026-04-30 at 11.47.45 (1).jpeg',
+        'IMAGENS/portfolio/cubatao/depois/WhatsApp Image 2026-04-30 at 11.47.45 (2).jpeg'
+    ];
+
+    function setupSlider(sliderId, imageArray) {
+        const container = document.getElementById(sliderId);
+        if (!container) return;
+        
+        let currentIndex = 0;
+        const imgEl = container.querySelector('.slider-img');
+        const prevBtn = container.querySelector('.prev-btn');
+        const nextBtn = container.querySelector('.next-btn');
+        const fullBtn = container.querySelector('.fullscreen-btn');
+        
+        const updateImage = () => {
+            imgEl.style.opacity = '0';
+            setTimeout(() => {
+                imgEl.src = imageArray[currentIndex];
+                imgEl.style.opacity = '1';
+            }, 200);
+        };
+        
+        prevBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentIndex = (currentIndex - 1 + imageArray.length) % imageArray.length;
+            updateImage();
+        });
+        
+        nextBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentIndex = (currentIndex + 1) % imageArray.length;
+            updateImage();
+        });
+
+        fullBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            openModal(imageArray, currentIndex);
+        });
+    }
+
+    setupSlider('slider-antes', imagesAntes);
+    setupSlider('slider-depois', imagesDepois);
+
+    // Modal Logic
+    const modal = document.getElementById('fullscreen-modal');
+    const modalImg = document.getElementById('modal-img');
+    const closeModalBtn = document.getElementById('close-modal');
+    const modalPrev = document.getElementById('modal-prev');
+    const modalNext = document.getElementById('modal-next');
+    const modalCounter = document.getElementById('modal-counter');
+
+    let modalImages = [];
+    let modalCurrentIndex = 0;
+
+    function openModal(images, index) {
+        modalImages = images;
+        modalCurrentIndex = index;
+        updateModalImage();
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        document.body.style.overflow = '';
+    }
+
+    function updateModalImage() {
+        modalImg.style.opacity = '0';
+        setTimeout(() => {
+            modalImg.src = modalImages[modalCurrentIndex];
+            modalImg.style.opacity = '1';
+            modalCounter.textContent = `${modalCurrentIndex + 1} / ${modalImages.length}`;
+        }, 200);
+    }
+
+    closeModalBtn.addEventListener('click', closeModal);
+
+    modalPrev.addEventListener('click', (e) => {
+        e.stopPropagation();
+        modalCurrentIndex = (modalCurrentIndex - 1 + modalImages.length) % modalImages.length;
+        updateModalImage();
+    });
+
+    modalNext.addEventListener('click', (e) => {
+        e.stopPropagation();
+        modalCurrentIndex = (modalCurrentIndex + 1) % modalImages.length;
+        updateModalImage();
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (!modal.classList.contains('pointer-events-none')) {
+            if (e.key === 'Escape') closeModal();
+            if (e.key === 'ArrowLeft') {
+                modalCurrentIndex = (modalCurrentIndex - 1 + modalImages.length) % modalImages.length;
+                updateModalImage();
+            }
+            if (e.key === 'ArrowRight') {
+                modalCurrentIndex = (modalCurrentIndex + 1) % modalImages.length;
+                updateModalImage();
+            }
+        }
+    });
+
+    // Click outside image to close
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+
 </script>
 </body>
 </html>
