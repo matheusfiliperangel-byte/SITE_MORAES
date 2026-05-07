@@ -149,13 +149,13 @@ tailwind.config = {
                                 </div>
                                 
                                 <!-- Navigation -->
-                                <button class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-gold-premium text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all z-30 prev-btn cursor-pointer">
+                                <button class="hidden sm:block absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-gold-premium text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all z-30 prev-btn cursor-pointer">
                                     <span class="material-symbols-outlined">chevron_left</span>
                                 </button>
-                                <button class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-gold-premium text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all z-30 next-btn cursor-pointer">
+                                <button class="hidden sm:block absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-gold-premium text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all z-30 next-btn cursor-pointer">
                                     <span class="material-symbols-outlined">chevron_right</span>
                                 </button>
-                                <button class="absolute top-4 right-4 bg-black/50 hover:bg-gold-premium text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all z-30 fullscreen-btn cursor-pointer">
+                                <button class="absolute top-4 right-4 bg-black/50 hover:bg-gold-premium text-white p-2 rounded-full opacity-100 sm:opacity-0 group-hover:opacity-100 transition-all z-30 fullscreen-btn cursor-pointer">
                                     <span class="material-symbols-outlined text-sm">fullscreen</span>
                                 </button>
                             </div>
@@ -169,13 +169,13 @@ tailwind.config = {
                                 </div>
                                 
                                 <!-- Navigation -->
-                                <button class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-gold-premium text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all z-30 prev-btn cursor-pointer">
+                                <button class="hidden sm:block absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-gold-premium text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all z-30 prev-btn cursor-pointer">
                                     <span class="material-symbols-outlined">chevron_left</span>
                                 </button>
-                                <button class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-gold-premium text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all z-30 next-btn cursor-pointer">
+                                <button class="hidden sm:block absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-gold-premium text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all z-30 next-btn cursor-pointer">
                                     <span class="material-symbols-outlined">chevron_right</span>
                                 </button>
-                                <button class="absolute top-4 right-4 bg-black/50 hover:bg-gold-premium text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all z-30 fullscreen-btn cursor-pointer">
+                                <button class="absolute top-4 right-4 bg-black/50 hover:bg-gold-premium text-white p-2 rounded-full opacity-100 sm:opacity-0 group-hover:opacity-100 transition-all z-30 fullscreen-btn cursor-pointer">
                                     <span class="material-symbols-outlined text-sm">fullscreen</span>
                                 </button>
                             </div>
@@ -367,10 +367,10 @@ tailwind.config = {
     <div class="relative w-full max-w-6xl mx-auto px-4 h-[80vh] flex items-center justify-center">
         <img id="modal-img" src="" class="max-h-full max-w-full object-contain shadow-2xl transition-opacity duration-300" alt="Fullscreen Image">
         
-        <button id="modal-prev" class="absolute left-4 sm:left-10 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-gold-premium text-white p-4 rounded-full transition-all cursor-pointer">
+        <button id="modal-prev" class="hidden sm:block absolute left-4 sm:left-10 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-gold-premium text-white p-4 rounded-full transition-all cursor-pointer">
             <span class="material-symbols-outlined text-3xl">chevron_left</span>
         </button>
-        <button id="modal-next" class="absolute right-4 sm:right-10 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-gold-premium text-white p-4 rounded-full transition-all cursor-pointer">
+        <button id="modal-next" class="hidden sm:block absolute right-4 sm:right-10 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-gold-premium text-white p-4 rounded-full transition-all cursor-pointer">
             <span class="material-symbols-outlined text-3xl">chevron_right</span>
         </button>
         
@@ -462,6 +462,33 @@ tailwind.config = {
             updateImage();
         });
 
+        // Swipe logic
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        container.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, {passive: true});
+        
+        container.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, {passive: true});
+        
+        function handleSwipe() {
+            const threshold = 40;
+            if (touchEndX < touchStartX - threshold) {
+                // Swipe left
+                currentIndex = (currentIndex + 1) % imageArray.length;
+                updateImage();
+            }
+            if (touchEndX > touchStartX + threshold) {
+                // Swipe right
+                currentIndex = (currentIndex - 1 + imageArray.length) % imageArray.length;
+                updateImage();
+            }
+        }
+
         fullBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             openModal(imageArray, currentIndex);
@@ -536,6 +563,34 @@ tailwind.config = {
     modal.addEventListener('click', (e) => {
         if (e.target === modal) closeModal();
     });
+
+    // Modal Swipe logic
+    let modalTouchStartX = 0;
+    let modalTouchEndX = 0;
+    
+    modal.addEventListener('touchstart', e => {
+        modalTouchStartX = e.changedTouches[0].screenX;
+    }, {passive: true});
+    
+    modal.addEventListener('touchend', e => {
+        modalTouchEndX = e.changedTouches[0].screenX;
+        handleModalSwipe();
+    }, {passive: true});
+    
+    function handleModalSwipe() {
+        if (modal.classList.contains('pointer-events-none')) return;
+        const threshold = 40;
+        if (modalTouchEndX < modalTouchStartX - threshold) {
+            // Swipe left
+            modalCurrentIndex = (modalCurrentIndex + 1) % modalImages.length;
+            updateModalImage();
+        }
+        if (modalTouchEndX > modalTouchStartX + threshold) {
+            // Swipe right
+            modalCurrentIndex = (modalCurrentIndex - 1 + modalImages.length) % modalImages.length;
+            updateModalImage();
+        }
+    }
 
 </script>
 </body>
