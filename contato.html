@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Contato — Moraes Engenharia | Solicite uma Consultoria em SP e RJ</title>
+<title data-i18n="contact.title_tag">Contato — Moraes Engenharia | Solicite uma Consultoria em SP e RJ</title>
 <meta name="description" content="Entre em contato com a Moraes Engenharia. Solicite uma consultoria técnica para sua obra comercial em São Paulo ou Rio de Janeiro. Resposta em até 24h úteis.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://moraesengenharia.com/contato.html">
@@ -75,28 +75,29 @@ tailwind.config = {
             <img src="LOGOS/customcolor/icon/MORAES_ICONE_PRETO.png" alt="Ícone Moraes" class="h-14 sm:h-16 md:h-20 w-auto invert brightness-0">
         </a>
         <div class="hidden lg:flex gap-12 items-center">
-            <a class="font-headline uppercase tracking-[0.3em] text-[11px] font-bold text-white/50 hover:text-white transition-all interactive" href="index.html">Home</a>
-            <a class="font-headline uppercase tracking-[0.3em] text-[11px] font-bold text-white/50 hover:text-white transition-all interactive" href="sobre.html">Sobre</a>
-            <a class="font-headline uppercase tracking-[0.3em] text-[11px] font-bold text-white/50 hover:text-white transition-all interactive" href="servicos.html">Serviços</a>
-            <a class="font-headline uppercase tracking-[0.3em] text-[11px] font-bold text-white/50 hover:text-white transition-all interactive" href="portfolio.html">Portfólio</a>
-            <a class="font-headline uppercase tracking-[0.3em] text-[11px] font-bold text-gold-premium transition-all interactive" href="contato.html">Contato</a>
+            <a class="font-headline uppercase tracking-[0.3em] text-[11px] font-bold text-white/50 hover:text-white transition-all interactive" href="index.html" data-i18n="nav.home">Home</a>
+            <a class="font-headline uppercase tracking-[0.3em] text-[11px] font-bold text-white/50 hover:text-white transition-all interactive" href="sobre.html" data-i18n="nav.about">Sobre</a>
+            <a class="font-headline uppercase tracking-[0.3em] text-[11px] font-bold text-white/50 hover:text-white transition-all interactive" href="servicos.html" data-i18n="nav.services">Serviços</a>
+            <a class="font-headline uppercase tracking-[0.3em] text-[11px] font-bold text-white/50 hover:text-white transition-all interactive" href="portfolio.html" data-i18n="nav.portfolio">Portfólio</a>
+            <a class="font-headline uppercase tracking-[0.3em] text-[11px] font-bold text-gold-premium transition-all interactive" href="contato.html" data-i18n="nav.contact">Contato</a>
         </div>
+        <button class="lang-toggle font-headline uppercase tracking-[0.2em] text-[10px] font-bold text-white/70 hover:text-gold-premium transition-all interactive border border-white/15 hover:border-gold-premium/50 px-3 py-2 mr-4 lg:ml-8" type="button">中文</button>
         <button class="lg:hidden text-white flex items-center justify-center p-2 z-[101] interactive" id="mobile-menu-btn">
             <span class="material-symbols-outlined text-3xl" id="menu-icon">menu</span>
         </button>
         <a class="hidden lg:flex group relative items-center gap-3 border border-white/10 px-8 py-3 font-headline font-bold uppercase tracking-[0.3em] text-[11px] hover:border-gold-premium/50 transition-all interactive" href="contato.html">
-            <span class="relative z-10 text-white">Fale Conosco</span>
+            <span class="relative z-10 text-white" data-i18n="nav.cta">Fale Conosco</span>
             <div class="absolute inset-0 bg-white/5 translate-y-full group-hover:translate-y-0 transition-transform"></div>
         </a>
     </div>
 </nav>
 
 <div class="menu-overlay" id="mobile-menu">
-    <a href="index.html" class="font-headline text-2xl uppercase tracking-[0.3em] text-white hover:text-gold-premium font-bold interactive mt-4">Home</a>
-    <a href="sobre.html" class="font-headline text-2xl uppercase tracking-[0.3em] text-white hover:text-gold-premium font-bold interactive mt-4">Sobre</a>
-    <a href="servicos.html" class="font-headline text-2xl uppercase tracking-[0.3em] text-white hover:text-gold-premium font-bold interactive mt-4">Serviços</a>
-    <a href="portfolio.html" class="font-headline text-2xl uppercase tracking-[0.3em] text-white hover:text-gold-premium font-bold interactive mt-4">Portfólio</a>
-    <a href="contato.html" class="font-headline text-2xl uppercase tracking-[0.3em] text-gold-premium font-bold interactive mt-4">Contato</a>
+    <a href="index.html" class="font-headline text-2xl uppercase tracking-[0.3em] text-white hover:text-gold-premium font-bold interactive mt-4" data-i18n="nav.home">Home</a>
+    <a href="sobre.html" class="font-headline text-2xl uppercase tracking-[0.3em] text-white hover:text-gold-premium font-bold interactive mt-4" data-i18n="nav.about">Sobre</a>
+    <a href="servicos.html" class="font-headline text-2xl uppercase tracking-[0.3em] text-white hover:text-gold-premium font-bold interactive mt-4" data-i18n="nav.services">Serviços</a>
+    <a href="portfolio.html" class="font-headline text-2xl uppercase tracking-[0.3em] text-white hover:text-gold-premium font-bold interactive mt-4" data-i18n="nav.portfolio">Portfólio</a>
+    <a href="contato.html" class="font-headline text-2xl uppercase tracking-[0.3em] text-gold-premium font-bold interactive mt-4" data-i18n="nav.contact">Contato</a>
 </div>
 
 <main class="pt-48 pb-32">
@@ -105,19 +106,19 @@ tailwind.config = {
         <div class="max-w-[1400px] mx-auto px-6 md:px-16">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-32">
                 <div class="reveal-up">
-                    <div class="section-label mb-8">04 // PROPOSTA</div>
-                    <h2 class="font-headline text-5xl md:text-7xl font-black tracking-[-0.04em] uppercase text-white mb-16 leading-[1.0]">
+                    <div class="section-label mb-8" data-i18n="contact.label">04 // PROPOSTA</div>
+                    <h2 class="font-headline text-5xl md:text-7xl font-black tracking-[-0.04em] uppercase text-white mb-16 leading-[1.0]" data-i18n="contact.title">
                         Acelere seu <br/> <span class="text-gold-premium italic font-light">Investimento</span>.
                     </h2>
-                    <p class="text-on-surface-variant text-lg md:text-xl mb-16 md:mb-24 max-w-md font-light leading-relaxed">
+                    <p class="text-on-surface-variant text-lg md:text-xl mb-16 md:mb-24 max-w-md font-light leading-relaxed" data-i18n="contact.subtitle">
                         Decisões rápidas constroem impérios. Solicite uma consultoria com nosso time técnico em SP ou RJ.
                     </p>
                     <div class="space-y-12">
                         <div class="flex items-start gap-8">
                             <span class="material-symbols-outlined text-gold-premium text-3xl">location_on</span>
                             <div>
-                                <h4 class="text-white font-headline font-bold uppercase text-[11px] tracking-[0.4em] mb-4">Sede Administrativa</h4>
-                                <p class="text-on-surface-variant/70 text-sm tracking-widest font-light uppercase leading-loose">
+                                <h4 class="text-white font-headline font-bold uppercase text-[11px] tracking-[0.4em] mb-4" data-i18n="contact.office.title">Sede Administrativa</h4>
+                                <p class="text-on-surface-variant/70 text-sm tracking-widest font-light uppercase leading-loose" data-i18n="contact.office.address">
                                     Rua Boa Vista, 254 — Sala 1516<br>Centro Histórico, São Paulo - SP
                                 </p>
                             </div>
@@ -125,7 +126,7 @@ tailwind.config = {
                         <div class="flex items-start gap-8">
                             <span class="material-symbols-outlined text-gold-premium text-3xl">mail</span>
                             <div>
-                                <h4 class="text-white font-headline font-bold uppercase text-[11px] tracking-[0.4em] mb-4">Contato Corporativo</h4>
+                                <h4 class="text-white font-headline font-bold uppercase text-[11px] tracking-[0.4em] mb-4" data-i18n="contact.email.title">Contato Corporativo</h4>
                                 <p class="text-on-surface-variant/70 text-sm tracking-widest font-light uppercase">contato@moraesengenharia.com</p>
                             </div>
                         </div>
@@ -135,7 +136,7 @@ tailwind.config = {
                                     <svg class="w-6 h-6 fill-current text-[#25D366]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.488-1.761-1.663-2.06-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
                                     (11) 99397-2691
                                 </span>
-                                <span class="relative z-10 text-white border-l border-white/20 pl-6">Atendimento WhatsApp</span>
+                                <span class="relative z-10 text-white border-l border-white/20 pl-6" data-i18n="contact.whatsapp">Atendimento WhatsApp</span>
                                 <div class="absolute inset-0 bg-white/5 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
                             </a>
                         </div>
@@ -146,25 +147,25 @@ tailwind.config = {
                     <form id="contact-form" class="space-y-8 md:space-y-12" action="https://formsubmit.co/ajax/contato@moraesengenharia.com" method="POST">
                         <input type="hidden" name="_captcha" value="false">
                         <div class="space-y-4">
-                            <label class="font-mono text-[11px] uppercase tracking-[0.4em] text-gold-premium font-bold">Nome Completo</label>
-                            <input class="w-full bg-transparent border-0 border-b border-white/20 focus:border-gold-premium focus:ring-0 text-white py-4 md:py-6 transition-all placeholder-white/30" placeholder="SEU NOME" type="text" name="name" required/>
+                            <label class="font-mono text-[11px] uppercase tracking-[0.4em] text-gold-premium font-bold" data-i18n="contact.form.name_label">Nome Completo</label>
+                            <input class="w-full bg-transparent border-0 border-b border-white/20 focus:border-gold-premium focus:ring-0 text-white py-4 md:py-6 transition-all placeholder-white/30" placeholder="SEU NOME" data-i18n-placeholder="contact.form.name_placeholder" type="text" name="name" required/>
                         </div>
                         <div class="space-y-4">
-                            <label class="font-mono text-[11px] uppercase tracking-[0.4em] text-gold-premium font-bold">E-mail Corporativo</label>
-                            <input class="w-full bg-transparent border-0 border-b border-white/20 focus:border-gold-premium focus:ring-0 text-white py-4 md:py-6 transition-all placeholder-white/30" placeholder="SEU EMAIL" type="email" name="email" required/>
+                            <label class="font-mono text-[11px] uppercase tracking-[0.4em] text-gold-premium font-bold" data-i18n="contact.form.email_label">E-mail Corporativo</label>
+                            <input class="w-full bg-transparent border-0 border-b border-white/20 focus:border-gold-premium focus:ring-0 text-white py-4 md:py-6 transition-all placeholder-white/30" placeholder="SEU EMAIL" data-i18n-placeholder="contact.form.email_placeholder" type="email" name="email" required/>
                         </div>
                         <div class="space-y-4">
-                            <label class="font-mono text-[11px] uppercase tracking-[0.4em] text-gold-premium font-bold">Mensagem Técnica</label>
-                            <textarea class="w-full bg-transparent border-0 border-b border-white/20 focus:border-gold-premium focus:ring-0 text-white py-4 md:py-6 transition-all placeholder-white/30" placeholder="ESCOPO DO PROJETO..." rows="3" name="message" required></textarea>
+                            <label class="font-mono text-[11px] uppercase tracking-[0.4em] text-gold-premium font-bold" data-i18n="contact.form.message_label">Mensagem Técnica</label>
+                            <textarea class="w-full bg-transparent border-0 border-b border-white/20 focus:border-gold-premium focus:ring-0 text-white py-4 md:py-6 transition-all placeholder-white/30" placeholder="ESCOPO DO PROJETO..." data-i18n-placeholder="contact.form.message_placeholder" rows="3" name="message" required></textarea>
                         </div>
                         <button id="submit-btn" class="w-full gold-gradient text-white font-headline font-bold py-6 md:py-8 uppercase tracking-[0.4em] text-[11px] md:text-[11px] hover:shadow-[0_20px_60px_rgba(229,161,0,0.2)] transition-all duration-700 interactive" type="submit">
-                            Solicitar Proposta
+                            <span data-i18n="contact.form.submit">Solicitar Proposta</span>
                         </button>
                     </form>
                     <div id="form-success" class="hidden text-center py-16 md:py-24">
                         <span class="material-symbols-outlined text-gold-premium text-6xl md:text-7xl block mb-6" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                        <h3 class="font-headline font-bold text-white text-2xl md:text-3xl uppercase tracking-[0.2em] mb-4">Proposta Enviada</h3>
-                        <p class="text-white/50 font-body text-sm md:text-base tracking-wider max-w-sm mx-auto leading-relaxed">Nossa equipe técnica retornará em até 24h úteis.</p>
+                        <h3 class="font-headline font-bold text-white text-2xl md:text-3xl uppercase tracking-[0.2em] mb-4" data-i18n="contact.form.success.title">Proposta Enviada</h3>
+                        <p class="text-white/50 font-body text-sm md:text-base tracking-wider max-w-sm mx-auto leading-relaxed" data-i18n="contact.form.success.desc">Nossa equipe técnica retornará em até 24h úteis.</p>
                     </div>
                 </div>
             </div>
@@ -180,7 +181,7 @@ tailwind.config = {
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 md:gap-8 px-6 md:px-16 py-12 md:py-16 w-full max-w-[1400px] mx-auto">
         <div class="flex flex-col gap-6">
-            <p class="font-body text-[11px] tracking-[0.3em] uppercase text-white/30 max-w-xs leading-loose">
+            <p class="font-body text-[11px] tracking-[0.3em] uppercase text-white/30 max-w-xs leading-loose" data-i18n="footer.tagline">
                 Construções comerciais de alto padrão em São Paulo e Rio de Janeiro.
             </p>
             <a href="https://www.instagram.com/lucasimas__" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 text-white/30 hover:text-gold-premium transition-colors duration-300 interactive">
@@ -189,18 +190,18 @@ tailwind.config = {
             </a>
         </div>
         <div class="flex flex-col gap-4">
-            <h4 class="text-gold-premium font-headline font-bold text-[11px] uppercase tracking-[0.5em] mb-2">Navegação</h4>
+            <h4 class="text-gold-premium font-headline font-bold text-[11px] uppercase tracking-[0.5em] mb-2" data-i18n="footer.nav_title">Navegação</h4>
             <nav class="flex flex-col gap-3">
-                <a href="index.html" class="text-white/40 hover:text-white font-headline text-[10px] tracking-[0.4em] uppercase transition-colors duration-300 interactive">Início</a>
-                <a href="sobre.html" class="text-white/40 hover:text-white font-headline text-[10px] tracking-[0.4em] uppercase transition-colors duration-300 interactive">Sobre</a>
-                <a href="servicos.html" class="text-white/40 hover:text-white font-headline text-[10px] tracking-[0.4em] uppercase transition-colors duration-300 interactive">Serviços</a>
-                <a href="portfolio.html" class="text-white/40 hover:text-white font-headline text-[10px] tracking-[0.4em] uppercase transition-colors duration-300 interactive">Obras</a>
-                <a href="contato.html" class="text-white/40 hover:text-white font-headline text-[10px] tracking-[0.4em] uppercase transition-colors duration-300 interactive">Contato</a>
+                <a href="index.html" class="text-white/40 hover:text-white font-headline text-[10px] tracking-[0.4em] uppercase transition-colors duration-300 interactive" data-i18n="footer.nav.home">Início</a>
+                <a href="sobre.html" class="text-white/40 hover:text-white font-headline text-[10px] tracking-[0.4em] uppercase transition-colors duration-300 interactive" data-i18n="footer.nav.about">Sobre</a>
+                <a href="servicos.html" class="text-white/40 hover:text-white font-headline text-[10px] tracking-[0.4em] uppercase transition-colors duration-300 interactive" data-i18n="footer.nav.services">Serviços</a>
+                <a href="portfolio.html" class="text-white/40 hover:text-white font-headline text-[10px] tracking-[0.4em] uppercase transition-colors duration-300 interactive" data-i18n="footer.nav.portfolio">Obras</a>
+                <a href="contato.html" class="text-white/40 hover:text-white font-headline text-[10px] tracking-[0.4em] uppercase transition-colors duration-300 interactive" data-i18n="footer.nav.contact">Contato</a>
             </nav>
         </div>
         <div class="flex flex-col gap-6">
-            <h4 class="text-gold-premium font-headline font-bold text-[11px] uppercase tracking-[0.5em] mb-2">Escritório Central</h4>
-            <p class="text-white/40 font-headline text-[10px] tracking-[0.4em] uppercase leading-loose">
+            <h4 class="text-gold-premium font-headline font-bold text-[11px] uppercase tracking-[0.5em] mb-2" data-i18n="footer.office_title">Escritório Central</h4>
+            <p class="text-white/40 font-headline text-[10px] tracking-[0.4em] uppercase leading-loose" data-i18n="footer.office_address">
                 Rua Boa Vista, 254 — Sala 1516<br>Centro Histórico, São Paulo
             </p>
             <a href="mailto:contato@moraesengenharia.com" class="text-white/40 hover:text-gold-premium font-headline text-[10px] tracking-[0.4em] uppercase transition-colors duration-300 interactive">contato@moraesengenharia.com</a>
@@ -209,8 +210,8 @@ tailwind.config = {
     </div>
     <div class="border-t border-white/5 border-dashed">
         <div class="px-6 md:px-16 py-6 md:py-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left w-full max-w-[1400px] mx-auto">
-            <p class="font-mono text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-white/20">© 2026 Moraes Engenharia. Todos os direitos reservados.</p>
-            <p class="font-mono text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-white/20">CREA-SP 2884830 &nbsp;•&nbsp; CNPJ 47.457.237/0001-60</p>
+            <p class="font-mono text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-white/20" data-i18n="footer.copyright">© 2026 Moraes Engenharia. Todos os direitos reservados.</p>
+            <p class="font-mono text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-white/20" data-i18n="footer.crea">CREA-SP 2884830 &nbsp;•&nbsp; CNPJ 47.457.237/0001-60</p>
         </div>
     </div>
 </footer>
@@ -255,7 +256,7 @@ tailwind.config = {
 
     form.addEventListener('submit', function(e) {
         e.preventDefault();
-        submitBtn.textContent = 'ENVIANDO...';
+        submitBtn.textContent = window.MoraesI18n ? (window.MoraesI18n.getLang() === 'zh' ? '发送中...' : 'ENVIANDO...') : 'ENVIANDO...';
         submitBtn.disabled = true;
 
         fetch(form.action, {
@@ -273,5 +274,6 @@ tailwind.config = {
         });
     });
 </script>
+<script src="translations.js"></script>
 </body>
 </html>

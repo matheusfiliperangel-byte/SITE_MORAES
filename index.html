@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>MORAES Engenharia - Construções Comerciais de Alto Padrão em SP e RJ</title>
+<title data-i18n="home.title_tag">MORAES Engenharia - Construções Comerciais de Alto Padrão em SP e RJ</title>
 <link rel="icon" type="image/png" href="LOGOS/customcolor/icon/customcolor_icon_customcolor_background.png"/>
 <meta name="description" content="Construtora especializada em edifícios comerciais, galpões industriais e reformas estruturais. 8 anos de experiência, compromisso com prazo e qualidade inegociável. São Paulo e Rio de Janeiro.">
 <meta property="og:type" content="website">
@@ -165,31 +165,35 @@ tailwind.config = {
         </a>
         
         <div class="hidden lg:flex gap-12 items-center">
-            <a class="font-headline uppercase tracking-[0.3em] text-[11px] font-bold text-gold-premium transition-all interactive" href="index.html">Home</a>
-            <a class="font-headline uppercase tracking-[0.3em] text-[11px] font-bold text-white/50 hover:text-white transition-all interactive" href="sobre.html">Sobre</a>
-            <a class="font-headline uppercase tracking-[0.3em] text-[11px] font-bold text-white/50 hover:text-white transition-all interactive" href="servicos.html">Serviços</a>
-            <a class="font-headline uppercase tracking-[0.3em] text-[11px] font-bold text-white/50 hover:text-white transition-all interactive" href="portfolio.html">Portfólio</a>
-            <a class="font-headline uppercase tracking-[0.3em] text-[11px] font-bold text-white/50 hover:text-white transition-all interactive" href="contato.html">Contato</a>
+            <a class="font-headline uppercase tracking-[0.3em] text-[11px] font-bold text-gold-premium transition-all interactive" href="index.html" data-i18n="nav.home">Home</a>
+            <a class="font-headline uppercase tracking-[0.3em] text-[11px] font-bold text-white/50 hover:text-white transition-all interactive" href="sobre.html" data-i18n="nav.about">Sobre</a>
+            <a class="font-headline uppercase tracking-[0.3em] text-[11px] font-bold text-white/50 hover:text-white transition-all interactive" href="servicos.html" data-i18n="nav.services">Serviços</a>
+            <a class="font-headline uppercase tracking-[0.3em] text-[11px] font-bold text-white/50 hover:text-white transition-all interactive" href="portfolio.html" data-i18n="nav.portfolio">Portfólio</a>
+            <a class="font-headline uppercase tracking-[0.3em] text-[11px] font-bold text-white/50 hover:text-white transition-all interactive" href="contato.html" data-i18n="nav.contact">Contato</a>
         </div>
 
-        <button class="lg:hidden text-white flex items-center justify-center p-2 z-[101] interactive" id="mobile-menu-btn">
-            <span class="material-symbols-outlined text-3xl" id="menu-icon">menu</span>
-        </button>
-        
-        <a class="hidden lg:flex group relative items-center gap-3 border border-white/10 px-8 py-3 font-headline font-bold uppercase tracking-[0.3em] text-[11px] hover:border-gold-premium/50 transition-all duration-500 overflow-hidden interactive" href="contato.html">
-            <span class="relative z-10 text-white">Fale Conosco</span>
-            <div class="absolute inset-0 bg-white/5 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-        </a>
+        <div class="flex items-center gap-3 lg:gap-4">
+            <button class="lang-toggle font-headline uppercase tracking-[0.2em] text-[10px] font-bold text-white/70 hover:text-gold-premium transition-all interactive border border-white/15 hover:border-gold-premium/50 px-3 py-2" type="button">中文</button>
+
+            <button class="lg:hidden text-white flex items-center justify-center p-2 z-[101] interactive" id="mobile-menu-btn">
+                <span class="material-symbols-outlined text-3xl" id="menu-icon">menu</span>
+            </button>
+
+            <a class="hidden lg:flex group relative items-center gap-3 border border-white/10 px-8 py-3 font-headline font-bold uppercase tracking-[0.3em] text-[11px] hover:border-gold-premium/50 transition-all duration-500 overflow-hidden interactive" href="contato.html">
+                <span class="relative z-10 text-white" data-i18n="nav.cta">Fale Conosco</span>
+                <div class="absolute inset-0 bg-white/5 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+            </a>
+        </div>
     </div>
 </nav>
 
 <!-- Fullscreen Menu -->
 <div class="menu-overlay" id="mobile-menu">
-    <a href="index.html" class="font-headline text-2xl uppercase tracking-[0.3em] text-gold-premium font-bold interactive">Home</a>
-    <a href="sobre.html" class="font-headline text-2xl uppercase tracking-[0.3em] text-white hover:text-gold-premium font-bold interactive mt-4">Sobre</a>
-    <a href="servicos.html" class="font-headline text-2xl uppercase tracking-[0.3em] text-white hover:text-gold-premium font-bold interactive mt-4">Serviços</a>
-    <a href="portfolio.html" class="font-headline text-2xl uppercase tracking-[0.3em] text-white hover:text-gold-premium font-bold interactive mt-4">Portfólio</a>
-    <a href="contato.html" class="font-headline text-2xl uppercase tracking-[0.3em] text-white hover:text-gold-premium font-bold interactive mt-4">Contato</a>
+    <a href="index.html" class="font-headline text-2xl uppercase tracking-[0.3em] text-gold-premium font-bold interactive" data-i18n="nav.home">Home</a>
+    <a href="sobre.html" class="font-headline text-2xl uppercase tracking-[0.3em] text-white hover:text-gold-premium font-bold interactive mt-4" data-i18n="nav.about">Sobre</a>
+    <a href="servicos.html" class="font-headline text-2xl uppercase tracking-[0.3em] text-white hover:text-gold-premium font-bold interactive mt-4" data-i18n="nav.services">Serviços</a>
+    <a href="portfolio.html" class="font-headline text-2xl uppercase tracking-[0.3em] text-white hover:text-gold-premium font-bold interactive mt-4" data-i18n="nav.portfolio">Portfólio</a>
+    <a href="contato.html" class="font-headline text-2xl uppercase tracking-[0.3em] text-white hover:text-gold-premium font-bold interactive mt-4" data-i18n="nav.contact">Contato</a>
 </div>
 
 <main>
@@ -208,26 +212,26 @@ tailwind.config = {
 
         <!-- Scroll Indicator -->
         <div id="scroll-indicator" class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 z-10" style="opacity: 1; will-change: opacity;">
-            <span class="text-white/70 font-mono text-[9px] uppercase tracking-[0.4em] drop-shadow-md">Role para baixo</span>
+            <span class="text-white/70 font-mono text-[9px] uppercase tracking-[0.4em] drop-shadow-md" data-i18n="scroll.indicator">Role para baixo</span>
             <div class="w-[1px] h-12 bg-gradient-to-b from-white to-transparent animate-pulse"></div>
         </div>
 
         <!-- Hero Content -->
         <div id="hero-content" class="max-w-[1400px] mx-auto px-6 md:px-16 w-full grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 items-center relative z-10" style="opacity: 0; transform: translateY(40px); will-change: opacity, transform;">
             <div class="lg:col-span-9">
-            <div class="section-label mb-4 md:mb-6">CONSTRUÇÕES DE ALTO PADRÃO</div>
-            <h1 class="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-[60px] xl:text-[80px] font-extrabold tracking-[-0.05em] leading-[0.9] text-white uppercase mb-6 md:mb-8">
+            <div class="section-label mb-4 md:mb-6" data-i18n="hero.label">CONSTRUÇÕES DE ALTO PADRÃO</div>
+            <h1 class="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-[60px] xl:text-[80px] font-extrabold tracking-[-0.05em] leading-[0.9] text-white uppercase mb-6 md:mb-8" data-i18n="hero.title">
                 Nós não entregamos obras. <br class="hidden lg:block"/> <span class="text-gold-premium italic font-light tracking-tight">Entregamos Confiança</span>.
             </h1>
             <div class="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-8">
-                <p class="text-base sm:text-lg text-on-surface-variant max-w-xl font-light leading-relaxed border-l-2 border-gold-premium/40 pl-4 sm:pl-6">
+                <p class="text-base sm:text-lg text-on-surface-variant max-w-xl font-light leading-relaxed border-l-2 border-gold-premium/40 pl-4 sm:pl-6" data-i18n="hero.subtitle">
                     Construções verticais, galpões industriais e comerciais com gestão de alto padrão, previsibilidade de prazo e controle absoluto de qualidade.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full lg:w-auto shrink-0">
-                    <a href="https://wa.me/5511993972691" class="w-full sm:w-auto text-center gold-gradient text-white font-headline font-bold px-8 sm:px-10 py-4 uppercase tracking-[0.2em] md:tracking-[0.3em] text-[11px] hover:shadow-[0_0_50px_rgba(229,161,0,0.2)] transition-all duration-700 interactive">
+                    <a href="https://wa.me/5511993972691" class="w-full sm:w-auto text-center gold-gradient text-white font-headline font-bold px-8 sm:px-10 py-4 uppercase tracking-[0.2em] md:tracking-[0.3em] text-[11px] hover:shadow-[0_0_50px_rgba(229,161,0,0.2)] transition-all duration-700 interactive" data-i18n="hero.cta1">
                         Fale com a Moraes
                     </a>
-                    <a href="portfolio.html" class="w-full sm:w-auto text-center border border-white/20 hover:border-gold-premium/50 text-white font-headline font-bold px-8 sm:px-10 py-4 uppercase tracking-[0.2em] md:tracking-[0.3em] text-[11px] transition-all duration-500 interactive">
+                    <a href="portfolio.html" class="w-full sm:w-auto text-center border border-white/20 hover:border-gold-premium/50 text-white font-headline font-bold px-8 sm:px-10 py-4 uppercase tracking-[0.2em] md:tracking-[0.3em] text-[11px] transition-all duration-500 interactive" data-i18n="hero.cta2">
                         Ver Obras
                     </a>
                 </div>
@@ -236,19 +240,19 @@ tailwind.config = {
                 <div class="lg:hidden grid grid-cols-2 gap-x-4 gap-y-4 border-t border-white/10 pt-6 mt-2 reveal-up">
                     <div>
                         <span class="text-gold-premium font-headline font-bold text-3xl block mb-0 tracking-tighter"><span class="count-up" data-target="8">0</span><span class="text-base align-top">+</span></span>
-                        <span class="text-white/60 font-headline font-bold uppercase tracking-[0.2em] text-[9px] block mt-1">Anos de Autoridade</span>
+                        <span class="text-white/60 font-headline font-bold uppercase tracking-[0.2em] text-[9px] block mt-1" data-i18n="stats.years">Anos de Autoridade</span>
                     </div>
                     <div>
                         <span class="text-gold-premium font-headline font-bold text-3xl block mb-0 tracking-tighter"><span class="count-up" data-target="90">0</span><span class="text-base align-top">+</span></span>
-                        <span class="text-white/60 font-headline font-bold uppercase tracking-[0.2em] text-[9px] block mt-1">Obras Entregues</span>
+                        <span class="text-white/60 font-headline font-bold uppercase tracking-[0.2em] text-[9px] block mt-1" data-i18n="stats.works">Obras Entregues</span>
                     </div>
                     <div>
                         <span class="text-gold-premium font-headline font-bold text-2xl block mb-0 tracking-tighter">+<span class="count-up" data-target="100000">0</span><span class="text-sm align-top">m²</span></span>
-                        <span class="text-white/60 font-headline font-bold uppercase tracking-[0.2em] text-[9px] block mt-1">Área Construída</span>
+                        <span class="text-white/60 font-headline font-bold uppercase tracking-[0.2em] text-[9px] block mt-1" data-i18n="stats.area">Área Construída</span>
                     </div>
                     <div>
                         <span class="text-gold-premium font-headline font-bold text-3xl block mb-0 tracking-tighter">2</span>
-                        <span class="text-white/60 font-headline font-bold uppercase tracking-[0.2em] text-[9px] block mt-1">Estados Atendidos</span>
+                        <span class="text-white/60 font-headline font-bold uppercase tracking-[0.2em] text-[9px] block mt-1" data-i18n="stats.states">Estados Atendidos</span>
                     </div>
                 </div>
             </div>
@@ -257,19 +261,19 @@ tailwind.config = {
             <div class="glass-panel p-5 lg:p-6 border-l-2 border-gold-premium relative group flex flex-col gap-4">
                 <div>
                     <span class="text-gold-premium font-headline font-bold text-3xl xl:text-4xl block mb-1 tracking-tighter"><span class="count-up" data-target="8">0</span><span class="text-lg align-top">+</span></span>
-                    <span class="text-white/60 font-headline font-bold uppercase tracking-[0.2em] text-[10px] block mb-1">Anos de Autoridade</span>
+                    <span class="text-white/60 font-headline font-bold uppercase tracking-[0.2em] text-[10px] block mb-1" data-i18n="stats.years">Anos de Autoridade</span>
                 </div>
                 <div class="border-t border-white/10 pt-3">
                     <span class="text-gold-premium font-headline font-bold text-3xl xl:text-4xl block mb-1 tracking-tighter"><span class="count-up" data-target="90">0</span><span class="text-lg align-top">+</span></span>
-                    <span class="text-white/60 font-headline font-bold uppercase tracking-[0.2em] text-[10px] block mb-1">Obras Entregues</span>
+                    <span class="text-white/60 font-headline font-bold uppercase tracking-[0.2em] text-[10px] block mb-1" data-i18n="stats.works">Obras Entregues</span>
                 </div>
                 <div class="border-t border-white/10 pt-3">
                     <span class="text-gold-premium font-headline font-bold text-2xl xl:text-3xl block mb-1 tracking-tighter break-all sm:break-normal">+<span class="count-up" data-target="100000">0</span><span class="text-base md:text-lg align-top">m²</span></span>
-                    <span class="text-white/60 font-headline font-bold uppercase tracking-[0.2em] text-[10px] block mb-1">Área Construída</span>
+                    <span class="text-white/60 font-headline font-bold uppercase tracking-[0.2em] text-[10px] block mb-1" data-i18n="stats.area">Área Construída</span>
                 </div>
                 <div class="border-t border-white/10 pt-3">
                     <span class="text-gold-premium font-headline font-bold text-3xl xl:text-4xl block mb-1 tracking-tighter">2</span>
-                    <span class="text-white/60 font-headline font-bold uppercase tracking-[0.2em] text-[10px] block mb-1">Estados Atendidos</span>
+                    <span class="text-white/60 font-headline font-bold uppercase tracking-[0.2em] text-[10px] block mb-1" data-i18n="stats.states">Estados Atendidos</span>
                 </div>
             </div>
         </div>
@@ -282,8 +286,8 @@ tailwind.config = {
     <div class="max-w-[1400px] mx-auto px-6 md:px-16">
         <div class="flex flex-col lg:flex-row gap-24 items-start">
             <div class="lg:w-1/3 lg:sticky lg:top-40 reveal-up">
-                <div class="section-label mb-8">01 // MÉTODO</div>
-                <h2 class="font-headline text-4xl md:text-6xl font-black tracking-[-0.04em] uppercase text-white leading-[1.0]">
+                <div class="section-label mb-8" data-i18n="method.label">01 // MÉTODO</div>
+                <h2 class="font-headline text-4xl md:text-6xl font-black tracking-[-0.04em] uppercase text-white leading-[1.0]" data-i18n="method.title">
                     Como<br/><span class="text-gold-premium italic font-light">Trabalhamos</span>.
                 </h2>
             </div>
@@ -292,8 +296,8 @@ tailwind.config = {
                     <div class="flex gap-10 md:gap-16 items-start">
                         <span class="font-mono text-gold-premium text-[11px] tracking-[0.4em] shrink-0 pt-1 w-10">01</span>
                         <div>
-                            <h3 class="font-headline text-xl md:text-2xl font-extrabold uppercase tracking-tight text-white mb-4">Diagnóstico Técnico</h3>
-                            <p class="text-on-surface-variant/70 text-sm font-light leading-relaxed max-w-lg">Visita ao terreno, análise estrutural e viabilidade legal. Mapeamos cada variável antes de assinar qualquer contrato.</p>
+                            <h3 class="font-headline text-xl md:text-2xl font-extrabold uppercase tracking-tight text-white mb-4" data-i18n="method.1.title">Diagnóstico Técnico</h3>
+                            <p class="text-on-surface-variant/70 text-sm font-light leading-relaxed max-w-lg" data-i18n="method.1.desc">Visita ao terreno, análise estrutural e viabilidade legal. Mapeamos cada variável antes de assinar qualquer contrato.</p>
                         </div>
                     </div>
                 </div>
@@ -301,8 +305,8 @@ tailwind.config = {
                     <div class="flex gap-10 md:gap-16 items-start">
                         <span class="font-mono text-gold-premium text-[11px] tracking-[0.4em] shrink-0 pt-1 w-10">02</span>
                         <div>
-                            <h3 class="font-headline text-xl md:text-2xl font-extrabold uppercase tracking-tight text-white mb-4">Planejamento e Contrato</h3>
-                            <p class="text-on-surface-variant/70 text-sm font-light leading-relaxed max-w-lg">Cronograma detalhado, orçamento fechado e marcos de entrega definidos em contrato. Zero surpresas.</p>
+                            <h3 class="font-headline text-xl md:text-2xl font-extrabold uppercase tracking-tight text-white mb-4" data-i18n="method.2.title">Planejamento e Contrato</h3>
+                            <p class="text-on-surface-variant/70 text-sm font-light leading-relaxed max-w-lg" data-i18n="method.2.desc">Cronograma detalhado, orçamento fechado e marcos de entrega definidos em contrato. Zero surpresas.</p>
                         </div>
                     </div>
                 </div>
@@ -310,8 +314,8 @@ tailwind.config = {
                     <div class="flex gap-10 md:gap-16 items-start">
                         <span class="font-mono text-gold-premium text-[11px] tracking-[0.4em] shrink-0 pt-1 w-10">03</span>
                         <div>
-                            <h3 class="font-headline text-xl md:text-2xl font-extrabold uppercase tracking-tight text-white mb-4">Execução e Entrega</h3>
-                            <p class="text-on-surface-variant/70 text-sm font-light leading-relaxed max-w-lg">Gestão diária em obra, relatórios periódicos e comunicação direta. Entregamos no prazo — com padrão superior ao contratado.</p>
+                            <h3 class="font-headline text-xl md:text-2xl font-extrabold uppercase tracking-tight text-white mb-4" data-i18n="method.3.title">Execução e Entrega</h3>
+                            <p class="text-on-surface-variant/70 text-sm font-light leading-relaxed max-w-lg" data-i18n="method.3.desc">Gestão diária em obra, relatórios periódicos e comunicação direta. Entregamos no prazo — com padrão superior ao contratado.</p>
                         </div>
                     </div>
                 </div>
@@ -326,13 +330,13 @@ tailwind.config = {
     <div class="max-w-[1400px] mx-auto px-6 md:px-16">
         <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 reveal-up">
             <div>
-                <div class="section-label mb-8">02 // OBRAS</div>
-                <h2 class="font-headline text-4xl md:text-6xl font-black tracking-[-0.04em] uppercase text-white leading-[1.0]">
+                <div class="section-label mb-8" data-i18n="portfolio_teaser.label">02 // OBRAS</div>
+                <h2 class="font-headline text-4xl md:text-6xl font-black tracking-[-0.04em] uppercase text-white leading-[1.0]" data-i18n="portfolio_teaser.title">
                     Portfólio<br/><span class="text-gold-premium italic font-light">Selecionado</span>.
                 </h2>
             </div>
             <a href="portfolio.html" class="font-headline uppercase tracking-[0.3em] text-[11px] font-bold text-white/50 hover:text-white transition-all flex items-center gap-3 interactive shrink-0">
-                Ver todas as obras <span class="material-symbols-outlined text-base">arrow_forward</span>
+                <span data-i18n="portfolio_teaser.see_all">Ver todas as obras</span> <span class="material-symbols-outlined text-base">arrow_forward</span>
             </a>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 reveal-up">
@@ -342,9 +346,9 @@ tailwind.config = {
                 </div>
                 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
                 <div class="absolute bottom-6 left-6 right-6">
-                    <span class="text-gold-premium font-mono text-[10px] uppercase tracking-[0.4em] block mb-2">Cubatão, SP</span>
-                    <h3 class="text-white font-headline font-black text-xl uppercase tracking-tight leading-tight">Restauro Da Antiga Sede</h3>
-                    <span class="text-white/50 font-mono text-[10px] uppercase tracking-[0.3em]">194,70 m² · 11 Meses</span>
+                    <span class="text-gold-premium font-mono text-[10px] uppercase tracking-[0.4em] block mb-2" data-i18n="portfolio.work1.location">Cubatão, SP</span>
+                    <h3 class="text-white font-headline font-black text-xl uppercase tracking-tight leading-tight" data-i18n="portfolio_teaser.work1.title">Restauro Da Antiga Sede</h3>
+                    <span class="text-white/50 font-mono text-[10px] uppercase tracking-[0.3em]" data-i18n="portfolio_teaser.work1.meta">194,70 m² · 11 Meses</span>
                 </div>
             </a>
             <a href="portfolio.html" class="group block relative overflow-hidden interactive">
@@ -353,9 +357,9 @@ tailwind.config = {
                 </div>
                 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
                 <div class="absolute bottom-6 left-6 right-6">
-                    <span class="text-gold-premium font-mono text-[10px] uppercase tracking-[0.4em] block mb-2">São Paulo, SP</span>
-                    <h3 class="text-white font-headline font-black text-xl uppercase tracking-tight leading-tight">Mercadão Municipal de São Paulo</h3>
-                    <span class="text-white/50 font-mono text-[10px] uppercase tracking-[0.3em]">4.530 m² · 12 Meses</span>
+                    <span class="text-gold-premium font-mono text-[10px] uppercase tracking-[0.4em] block mb-2" data-i18n="portfolio.work2.location">São Paulo, SP</span>
+                    <h3 class="text-white font-headline font-black text-xl uppercase tracking-tight leading-tight" data-i18n="portfolio_teaser.work2.title">Mercadão Municipal de São Paulo</h3>
+                    <span class="text-white/50 font-mono text-[10px] uppercase tracking-[0.3em]" data-i18n="portfolio_teaser.work2.meta">4.530 m² · 12 Meses</span>
                 </div>
             </a>
         </div>
@@ -365,18 +369,18 @@ tailwind.config = {
 <!-- CTA Final -->
 <section class="relative z-10 py-40 border-t border-white/5">
     <div class="max-w-[1400px] mx-auto px-6 md:px-16 text-center reveal-up">
-        <div class="section-label mb-8 justify-center">03 // PRÓXIMO PASSO</div>
-        <h2 class="font-headline text-4xl sm:text-6xl md:text-8xl font-black tracking-[-0.05em] uppercase text-white leading-[0.9] mb-12">
+        <div class="section-label mb-8 justify-center" data-i18n="cta_final.label">03 // PRÓXIMO PASSO</div>
+        <h2 class="font-headline text-4xl sm:text-6xl md:text-8xl font-black tracking-[-0.05em] uppercase text-white leading-[0.9] mb-12" data-i18n="cta_final.title">
             Vamos construir<br/><span class="text-gold-premium italic font-light">juntos</span>?
         </h2>
-        <p class="text-on-surface-variant text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto mb-16">
+        <p class="text-on-surface-variant text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto mb-16" data-i18n="cta_final.subtitle">
             Cada grande projeto começa com uma conversa. Conte pra gente o que você precisa e descubra como a Moraes pode transformar sua visão em estrutura.
         </p>
         <div class="flex flex-col sm:flex-row gap-6 justify-center">
-            <a href="https://wa.me/5511993972691" target="_blank" class="gold-gradient text-white font-headline font-bold px-12 py-4 uppercase tracking-[0.4em] text-[12px] hover:shadow-[0_0_50px_rgba(229,161,0,0.2)] transition-all duration-700 interactive">
+            <a href="https://wa.me/5511993972691" target="_blank" class="gold-gradient text-white font-headline font-bold px-12 py-4 uppercase tracking-[0.4em] text-[12px] hover:shadow-[0_0_50px_rgba(229,161,0,0.2)] transition-all duration-700 interactive" data-i18n="cta_final.btn1">
                 Falar pelo WhatsApp
             </a>
-            <a href="contato.html" class="border border-white/20 hover:border-gold-premium/50 text-white font-headline font-bold px-12 py-4 uppercase tracking-[0.4em] text-[12px] transition-all duration-500 interactive">
+            <a href="contato.html" class="border border-white/20 hover:border-gold-premium/50 text-white font-headline font-bold px-12 py-4 uppercase tracking-[0.4em] text-[12px] transition-all duration-500 interactive" data-i18n="cta_final.btn2">
                 Solicitar Proposta
             </a>
         </div>
@@ -393,7 +397,7 @@ tailwind.config = {
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 md:gap-8 px-6 md:px-16 py-12 md:py-16 w-full max-w-[1400px] mx-auto">
         <div class="flex flex-col gap-6">
-            <p class="font-body text-[11px] tracking-[0.3em] uppercase text-white/30 max-w-xs leading-loose">
+            <p class="font-body text-[11px] tracking-[0.3em] uppercase text-white/30 max-w-xs leading-loose" data-i18n="footer.tagline">
                 Construções comerciais de alto padrão em São Paulo e Rio de Janeiro.
             </p>
             <a href="https://www.instagram.com/lucasimas__" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 text-white/30 hover:text-gold-premium transition-colors duration-300 interactive">
@@ -402,18 +406,18 @@ tailwind.config = {
             </a>
         </div>
         <div class="flex flex-col gap-4">
-            <h4 class="text-gold-premium font-headline font-bold text-[11px] uppercase tracking-[0.5em] mb-2">Navegação</h4>
+            <h4 class="text-gold-premium font-headline font-bold text-[11px] uppercase tracking-[0.5em] mb-2" data-i18n="footer.nav_title">Navegação</h4>
             <nav class="flex flex-col gap-3">
-                <a href="index.html" class="text-white/40 hover:text-white font-headline text-[10px] tracking-[0.4em] uppercase transition-colors duration-300 interactive">Início</a>
-                <a href="sobre.html" class="text-white/40 hover:text-white font-headline text-[10px] tracking-[0.4em] uppercase transition-colors duration-300 interactive">Sobre</a>
-                <a href="servicos.html" class="text-white/40 hover:text-white font-headline text-[10px] tracking-[0.4em] uppercase transition-colors duration-300 interactive">Serviços</a>
-                <a href="portfolio.html" class="text-white/40 hover:text-white font-headline text-[10px] tracking-[0.4em] uppercase transition-colors duration-300 interactive">Obras</a>
-                <a href="contato.html" class="text-white/40 hover:text-white font-headline text-[10px] tracking-[0.4em] uppercase transition-colors duration-300 interactive">Contato</a>
+                <a href="index.html" class="text-white/40 hover:text-white font-headline text-[10px] tracking-[0.4em] uppercase transition-colors duration-300 interactive" data-i18n="footer.nav.home">Início</a>
+                <a href="sobre.html" class="text-white/40 hover:text-white font-headline text-[10px] tracking-[0.4em] uppercase transition-colors duration-300 interactive" data-i18n="footer.nav.about">Sobre</a>
+                <a href="servicos.html" class="text-white/40 hover:text-white font-headline text-[10px] tracking-[0.4em] uppercase transition-colors duration-300 interactive" data-i18n="footer.nav.services">Serviços</a>
+                <a href="portfolio.html" class="text-white/40 hover:text-white font-headline text-[10px] tracking-[0.4em] uppercase transition-colors duration-300 interactive" data-i18n="footer.nav.portfolio">Obras</a>
+                <a href="contato.html" class="text-white/40 hover:text-white font-headline text-[10px] tracking-[0.4em] uppercase transition-colors duration-300 interactive" data-i18n="footer.nav.contact">Contato</a>
             </nav>
         </div>
         <div class="flex flex-col gap-6">
-            <h4 class="text-gold-premium font-headline font-bold text-[11px] uppercase tracking-[0.5em] mb-2">Escritório Central</h4>
-            <p class="text-white/40 font-headline text-[10px] tracking-[0.4em] uppercase leading-loose">
+            <h4 class="text-gold-premium font-headline font-bold text-[11px] uppercase tracking-[0.5em] mb-2" data-i18n="footer.office_title">Escritório Central</h4>
+            <p class="text-white/40 font-headline text-[10px] tracking-[0.4em] uppercase leading-loose" data-i18n="footer.office_address">
                 Rua Boa Vista, 254 — Sala 1516<br>Centro Histórico, São Paulo
             </p>
             <a href="mailto:contato@moraesengenharia.com" class="text-white/40 hover:text-gold-premium font-headline text-[10px] tracking-[0.4em] uppercase transition-colors duration-300 interactive">contato@moraesengenharia.com</a>
@@ -422,8 +426,8 @@ tailwind.config = {
     </div>
     <div class="border-t border-white/5 border-dashed">
         <div class="px-6 md:px-16 py-6 md:py-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left w-full max-w-[1400px] mx-auto">
-            <p class="font-mono text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-white/20">© 2026 Moraes Engenharia. Todos os direitos reservados.</p>
-            <p class="font-mono text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-white/20">CREA-SP 2884830 &nbsp;•&nbsp; CNPJ 47.457.237/0001-60</p>
+            <p class="font-mono text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-white/20" data-i18n="footer.copyright">© 2026 Moraes Engenharia. Todos os direitos reservados.</p>
+            <p class="font-mono text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-white/20" data-i18n="footer.crea">CREA-SP 2884830 &nbsp;•&nbsp; CNPJ 47.457.237/0001-60</p>
         </div>
     </div>
 </footer>
@@ -529,5 +533,6 @@ tailwind.config = {
     counters.forEach(c => observer.observe(c));
 
 </script>
+<script src="translations.js"></script>
 </body>
 </html>
