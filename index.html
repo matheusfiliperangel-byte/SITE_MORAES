@@ -389,7 +389,7 @@ tailwind.config = {
                     <!-- Dark Overlay -->
                     <div class="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-colors duration-500 z-10"></div>
                     <!-- Background Image -->
-                    <img src="https://img.youtube.com/vi/cScd2sNAwbc/maxresdefault.jpg" alt="Moraes Engenharia em Ação" class="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000 ease-out">
+                    <img src="https://img.youtube.com/vi/Mew50jN3afQ/maxresdefault.jpg" alt="Moraes Engenharia em Ação" class="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000 ease-out">
                     <!-- Play Button -->
                     <div class="relative z-20 flex flex-col items-center gap-4">
                         <div class="w-16 h-16 md:w-20 md:h-20 rounded-full border border-white/20 group-hover:border-gold-premium bg-white/5 backdrop-blur-md flex items-center justify-center transition-all duration-500 group-hover:scale-110 shadow-lg">
@@ -581,7 +581,7 @@ tailwind.config = {
     if (videoCover && videoPlayerContainer) {
         videoCover.addEventListener('click', () => {
             const currentLang = window.MoraesI18n ? window.MoraesI18n.getLang() : 'pt';
-            const videoId = (currentLang === 'zh') ? 'Mew50jN3afQ' : 'cScd2sNAwbc';
+            const videoId = (currentLang === 'zh') ? 'cScd2sNAwbc' : 'Mew50jN3afQ';
 
             const iframe = document.createElement('iframe');
             iframe.setAttribute('src', `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1`);
