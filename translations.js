@@ -52,7 +52,12 @@ const TRANSLATIONS = {
     "portfolio_teaser.work1.meta": "194,70 m² · 11 Meses",
     "portfolio_teaser.work2.title": "Condomínio Portobello Resort & Safari",
     "portfolio_teaser.work2.meta": "Residencial Alto Padrão · 5 Meses",
-    "cta_final.label": "03 // PRÓXIMO PASSO",
+    "video.id": "cScd2sNAwbc",
+    "video.label": "03 // APRESENTAÇÃO",
+    "video.title": "Moraes<br/><span class=\"text-gold-premium italic font-light\">Em Ação</span>.",
+    "video.description": "Assista ao nosso vídeo institucional e conheça de perto o nosso padrão construtivo, a precisão da nossa execução e o rigor técnico que aplicamos a cada obra.",
+    "video.play": "Assistir Vídeo",
+    "cta_final.label": "04 // PRÓXIMO PASSO",
     "cta_final.title": "Vamos construir<br/><span class=\"text-gold-premium italic font-light\">juntos</span>?",
     "cta_final.subtitle": "Cada grande projeto começa com uma conversa. Conte pra gente o que você precisa e descubra como a Moraes pode transformar sua visão em estrutura.",
     "cta_final.btn1": "Falar pelo WhatsApp",
@@ -190,7 +195,12 @@ const TRANSLATIONS = {
     "portfolio_teaser.work1.meta": "194.70 平方米 · 11 个月",
     "portfolio_teaser.work2.title": "波多贝罗度假村",
     "portfolio_teaser.work2.meta": "高端住宅 · 5 个月",
-    "cta_final.label": "03 // 下一步",
+    "video.id": "Mew50jN3afQ",
+    "video.label": "03 // 宣传视频",
+    "video.title": "走进<br/><span class=\"text-gold-premium italic font-light\">Moraes</span>.",
+    "video.description": "观看我们的企业宣传片，近距离感受我们的施工标准、精准的执行力以及我们在每一项工程中应用的技术严谨性。",
+    "video.play": "观看视频",
+    "cta_final.label": "04 // 下一步",
     "cta_final.title": "让我们一起<br/><span class=\"text-gold-premium italic font-light\">建造</span>?",
     "cta_final.subtitle": "每一个伟大的项目都始于一次对话。告诉我们您的需求,看看 Moraes 如何将您的愿景化为实体建筑。",
     "cta_final.btn1": "通过 WhatsApp 联系",
@@ -318,6 +328,19 @@ const TRANSLATIONS = {
       btn.textContent = lang === 'pt' ? '中文' : 'PT';
       btn.setAttribute('aria-label', lang === 'pt' ? '切换到中文' : 'Mudar para Português');
     });
+
+    // Atualização dinâmica do vídeo institucional conforme o idioma
+    const videoCoverImg = document.querySelector('#video-cover img');
+    const activeIframe = document.querySelector('#video-player-container iframe');
+    if (videoCoverImg) {
+      const videoId = dict["video.id"] || "cScd2sNAwbc";
+      videoCoverImg.src = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+      
+      // Se o iframe do vídeo já estiver ativo (reproduzindo), atualiza o vídeo mantendo a reprodução automática
+      if (activeIframe) {
+        activeIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1`;
+      }
+    }
   }
 
   function init() {
