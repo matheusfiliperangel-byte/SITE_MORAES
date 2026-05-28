@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="careers.title_tag">Carreiras — Moraes Engenharia | Faça Parte do Nosso Time</title>
+<meta name="description" content="Trabalhe na Moraes Engenharia. Buscamos profissionais comprometidos com a excelência construtiva para fazer parte do nosso time técnico em São Paulo e Rio de Janeiro.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://moraesengenharia.com/carreiras.html">
+<meta property="og:title" content="Trabalhe Conosco — Moraes Engenharia">
+<meta property="og:description" content="Faça parte de uma construtora comercial de alto padrão em SP e RJ. Envie seu currículo.">
+<meta property="og:image" content="LOGOS/customcolor/icon/customcolor_icon_customcolor_background.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="LOGOS/customcolor/icon/customcolor_icon_customcolor_background.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Maitree:wght@300;400;500;600;700&family=Montserrat+Alternates:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                "background": "#050505",
+                "surface": "#050505",
+                "surface-container-lowest": "#020202",
+                "surface-container-low": "#1b1b1b",
+                "surface-container-highest": "#353535",
+                "on-background": "#e2e2e2",
+                "on-surface": "#e2e2e2",
+                "on-surface-variant": "#d5c4ad",
+                "gold-premium": "#E5A100"
+            },
+            fontFamily: {
+                "headline": ["Lato", "sans-serif"],
+                "body": ["Maitree", "serif"],
+                "mono": ["Montserrat Alternates", "sans-serif"]
+            }
+        }
+    }
+}
+</script>
+<style>
+    :root {
+        --frost: rgba(255, 255, 255, 0.04);
+        --border: rgba(255, 255, 255, 0.1);
+        --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    body { cursor: none; overflow-x: hidden; }
+    .material-symbols-outlined { font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24; }
+    .grain { position: fixed; inset: 0; pointer-events: none; z-index: 9999; opacity: 0.05; background: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PScwIDAgMjAwIDIwMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz4KICA8ZmlsdGVyIGlkPSdub2lzZSc+CiAgICA8ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC42NScgbnVtT2N0YXZlcz0nMycgc3RpdGNoVGlsZXM9J3N0aXRjaCcvPgogIDwvZmlsdGVyPgogIDxyZWN0IHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnIGZpbHRlcj0ndXJsKCNub2lzZSknLz4KPC9zdmc+'); }
+    #cursor-follower { position: fixed; top: 0; left: 0; width: 32px; height: 32px; border: 1px solid white; border-radius: 50%; pointer-events: none; z-index: 10000; transition: transform 0.15s var(--ease-out-expo), width 0.3s ease, height 0.3s ease, border-color 0.3s ease; mix-blend-mode: difference; display: flex; align-items: center; justify-content: center; }
+    #cursor-dot { width: 4px; height: 4px; background: white; border-radius: 50%; }
+    .cursor-active #cursor-follower { width: 64px; height: 64px; border-color: #E5A100; }
+    .glass-panel { background: var(--frost); backdrop-filter: blur(20px) saturate(150%); border: 1px solid var(--border); }
+    .gold-gradient { background: linear-gradient(135deg, #E5A100 0%, #FFD700 50%, #B8860B 100%); background-size: 200% 200%; transition: background-position 0.5s ease; }
+    .gold-gradient:hover { background-position: 100% 100%; }
+    .reveal-up { opacity: 0; transform: translateY(40px); transition: transform 1.2s var(--ease-out-expo), opacity 1.2s ease; }
+    .reveal-up.visible { opacity: 1; transform: translateY(0); }
+    .section-label { font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 0.4em; color: #E5A100; display: flex; align-items: center; gap: 1rem; }
+    .section-label::before { content: ''; width: 30px; height: 1px; background: #E5A100; }
+    .menu-overlay { position: fixed; inset: 0; background: rgba(5,5,5,0.98); backdrop-filter: blur(30px); z-index: 99; opacity: 0; pointer-events: none; transition: all 0.5s var(--ease-out-expo); display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 2rem; }
+    .menu-overlay.menu-active { opacity: 1; pointer-events: auto; }
+</style>
+</head>
+<body class="bg-surface-container-lowest text-on-background font-body selection:bg-gold-premium selection:text-white">
+
+<div class="grain"></div>
+<div id="cursor-follower"><div id="cursor-dot"></div></div>
+
+<!-- Nav -->
+<nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] lg:w-[90%] max-w-[1400px] z-[100] glass-panel rounded-sm">
+    <div class="flex justify-between items-center px-6 lg:px-10 py-5">
+        <a href="index.html" class="flex items-center gap-4 interactive">
+            <img src="LOGOS/customcolor/icon/MORAES_ICONE_PRETO.png" alt="Ícone Moraes" class="h-14 sm:h-16 md:h-20 w-auto invert brightness-0">
+        </a>
+        <div class="hidden lg:flex gap-12 items-center">
+            <a class="font-headline uppercase tracking-[0.3em] text-[11px] font-bold text-white/50 hover:text-white transition-all interactive" href="index.html" data-i18n="nav.home">Home</a>
+            <a class="font-headline uppercase tracking-[0.3em] text-[11px] font-bold text-white/50 hover:text-white transition-all interactive" href="sobre.html" data-i18n="nav.about">Sobre</a>
+            <a class="font-headline uppercase tracking-[0.3em] text-[11px] font-bold text-white/50 hover:text-white transition-all interactive" href="servicos.html" data-i18n="nav.services">Serviços</a>
+            <a class="font-headline uppercase tracking-[0.3em] text-[11px] font-bold text-white/50 hover:text-white transition-all interactive" href="portfolio.html" data-i18n="nav.portfolio">Portfólio</a>
+            <a class="font-headline uppercase tracking-[0.3em] text-[11px] font-bold text-white/50 hover:text-white transition-all interactive" href="contato.html" data-i18n="nav.contact">Contato</a>
+        </div>
+        <button class="lang-toggle font-headline uppercase tracking-[0.2em] text-[10px] font-bold text-white/70 hover:text-gold-premium transition-all interactive border border-white/15 hover:border-gold-premium/50 px-3 py-2 mr-4 lg:ml-8" type="button">中文</button>
+        <button class="lg:hidden text-white flex items-center justify-center p-2 z-[101] interactive" id="mobile-menu-btn">
+            <span class="material-symbols-outlined text-3xl" id="menu-icon">menu</span>
+        </button>
+        <a class="hidden lg:flex group relative items-center gap-3 border border-white/10 px-8 py-3 font-headline font-bold uppercase tracking-[0.3em] text-[11px] hover:border-gold-premium transition-colors duration-500 overflow-hidden interactive" href="contato.html">
+            <span class="relative z-10 text-white group-hover:text-black transition-colors duration-500" data-i18n="nav.cta">Fale Conosco</span>
+            <div class="absolute inset-0 bg-gold-premium translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
+        </a>
+    </div>
+</nav>
+
+<div class="menu-overlay" id="mobile-menu">
+    <a href="index.html" class="font-headline text-2xl uppercase tracking-[0.3em] text-white hover:text-gold-premium font-bold interactive mt-4" data-i18n="nav.home">Home</a>
+    <a href="sobre.html" class="font-headline text-2xl uppercase tracking-[0.3em] text-white hover:text-gold-premium font-bold interactive mt-4" data-i18n="nav.about">Sobre</a>
+    <a href="servicos.html" class="font-headline text-2xl uppercase tracking-[0.3em] text-white hover:text-gold-premium font-bold interactive mt-4" data-i18n="nav.services">Serviços</a>
+    <a href="portfolio.html" class="font-headline text-2xl uppercase tracking-[0.3em] text-white hover:text-gold-premium font-bold interactive mt-4" data-i18n="nav.portfolio">Portfólio</a>
+    <a href="contato.html" class="font-headline text-2xl uppercase tracking-[0.3em] text-white hover:text-gold-premium font-bold interactive mt-4" data-i18n="nav.contact">Contato</a>
+</div>
+
+<main class="pt-48 pb-32">
+    <!-- Careers Section -->
+    <section class="z-10 relative">
+        <div class="max-w-[1100px] mx-auto px-6">
+            <div class="reveal-up">
+                <div class="section-label mb-8" data-i18n="careers.label">05 // CARREIRAS</div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+                    <div>
+                        <h2 class="font-headline text-5xl md:text-6xl lg:text-7xl font-black tracking-[-0.04em] uppercase text-white mb-8 leading-[1.0]" data-i18n="careers.title">
+                            Faça Parte do <br/> <span class="text-gold-premium italic font-light">Nosso Time</span>.
+                        </h2>
+                        <p class="text-on-surface-variant text-lg mb-12 max-w-md font-light leading-relaxed font-body" data-i18n="careers.subtitle">
+                            Buscamos profissionais comprometidos com excelência construtiva. Se você acredita em fazer certo na primeira vez, queremos conhecer você.
+                        </p>
+                        
+                        <!-- Mini cards showing key areas -->
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
+                            <div class="glass-panel p-5 flex flex-col items-center text-center gap-3 rounded-sm">
+                                <span class="material-symbols-outlined text-gold-premium text-3xl">engineering</span>
+                                <span class="text-white font-headline text-[10px] tracking-[0.2em] uppercase font-bold" data-i18n="careers.area.eng">Engenharia</span>
+                            </div>
+                            <div class="glass-panel p-5 flex flex-col items-center text-center gap-3 rounded-sm">
+                                <span class="material-symbols-outlined text-gold-premium text-3xl">construction</span>
+                                <span class="text-white font-headline text-[10px] tracking-[0.2em] uppercase font-bold" data-i18n="careers.area.work">Obra</span>
+                            </div>
+                            <div class="glass-panel p-5 flex flex-col items-center text-center gap-3 rounded-sm">
+                                <span class="material-symbols-outlined text-gold-premium text-3xl">security</span>
+                                <span class="text-white font-headline text-[10px] tracking-[0.2em] uppercase font-bold" data-i18n="careers.area.safety">Segurança</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Form Container -->
+                    <div class="glass-panel p-8 md:p-12 shadow-2xl rounded-sm" id="career-form-container">
+                        <form id="career-form" class="space-y-8" action="https://formsubmit.co/ajax/contato@moraesengenharia.com" method="POST" enctype="multipart/form-data">
+                            <!-- Formsubmit options -->
+                            <input type="hidden" name="_captcha" value="true">
+                            <input type="hidden" name="_subject" value="Nova Candidatura — Trabalhe Conosco">
+                            <input type="hidden" name="_template" value="table">
+                            
+                            <div class="space-y-2">
+                                <label class="font-mono text-[10px] uppercase tracking-[0.4em] text-gold-premium font-bold" data-i18n="careers.form.name_label">Nome Completo</label>
+                                <input class="w-full bg-transparent border-0 border-b border-white/20 focus:border-gold-premium focus:ring-0 text-white py-3 transition-all placeholder-white/30" placeholder="SEU NOME COMPLETO" data-i18n-placeholder="careers.form.name_placeholder" type="text" name="name" required/>
+                            </div>
+                            
+                            <div class="space-y-2">
+                                <label class="font-mono text-[10px] uppercase tracking-[0.4em] text-gold-premium font-bold" data-i18n="careers.form.email_label">E-mail</label>
+                                <input class="w-full bg-transparent border-0 border-b border-white/20 focus:border-gold-premium focus:ring-0 text-white py-3 transition-all placeholder-white/30" placeholder="SEU MELHOR EMAIL" data-i18n-placeholder="careers.form.email_placeholder" type="email" name="email" required/>
+                            </div>
+                            
+                            <div class="space-y-2">
+                                <label class="font-mono text-[10px] uppercase tracking-[0.4em] text-gold-premium font-bold" data-i18n="careers.form.tel_label">Telefone / WhatsApp</label>
+                                <input id="career-phone" class="w-full bg-transparent border-0 border-b border-white/20 focus:border-gold-premium focus:ring-0 text-white py-3 transition-all placeholder-white/30" placeholder="(11) 99999-9999" data-i18n-placeholder="careers.form.tel_placeholder" type="tel" name="phone" required/>
+                            </div>
+                            
+                            <div class="space-y-2">
+                                <label class="font-mono text-[10px] uppercase tracking-[0.4em] text-gold-premium font-bold block mb-2" data-i18n="careers.form.area_label">Área de Interesse</label>
+                                <select class="w-full bg-surface-container-low border border-white/20 focus:border-gold-premium focus:ring-0 text-white py-3 px-4 transition-all rounded-sm cursor-pointer text-sm" name="interest_area" required>
+                                    <option value="" disabled selected data-i18n="careers.form.area.placeholder">SELECIONE UMA ÁREA</option>
+                                    <option value="Engenharia Civil" data-i18n="careers.form.area.civil" class="bg-[#1b1b1b] text-white">Engenharia Civil</option>
+                                    <option value="Mestre de Obras" data-i18n="careers.form.area.mestre" class="bg-[#1b1b1b] text-white">Mestre de Obras</option>
+                                    <option value="Técnico em Edificações" data-i18n="careers.form.area.tecnico" class="bg-[#1b1b1b] text-white">Técnico em Edificações</option>
+                                    <option value="Administrativo / Financeiro" data-i18n="careers.form.area.adm" class="bg-[#1b1b1b] text-white">Administrativo / Financeiro</option>
+                                    <option value="Segurança do Trabalho" data-i18n="careers.form.area.safety_area" class="bg-[#1b1b1b] text-white">Segurança do Trabalho</option>
+                                    <option value="Outro" data-i18n="careers.form.area.other" class="bg-[#1b1b1b] text-white">Outro</option>
+                                </select>
+                            </div>
+                            
+                            <div class="space-y-2">
+                                <label class="font-mono text-[10px] uppercase tracking-[0.4em] text-gold-premium font-bold block mb-2" data-i18n="careers.form.resume_label">Currículo (PDF, Máx 5MB)</label>
+                                <div class="relative">
+                                    <input type="file" id="career-file" name="attachment" accept=".pdf" class="hidden" required />
+                                    <label for="career-file" class="w-full flex items-center justify-center gap-3 border border-dashed border-white/20 hover:border-gold-premium px-6 py-4 rounded-sm cursor-pointer transition-colors group interactive">
+                                        <span id="file-icon" class="material-symbols-outlined text-white/50 group-hover:text-gold-premium transition-colors">attach_file</span>
+                                        <span id="file-text" class="text-white/50 group-hover:text-white font-headline text-[10px] tracking-[0.2em] uppercase transition-colors" data-i18n="careers.form.resume_button">Anexar Currículo</span>
+                                    </label>
+                                    <div id="file-error" class="hidden text-red-500 font-mono text-[9px] uppercase tracking-wider mt-2"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-2">
+                                <label class="font-mono text-[10px] uppercase tracking-[0.4em] text-gold-premium font-bold" data-i18n="careers.form.message_label">Mensagem (Opcional)</label>
+                                <textarea class="w-full bg-transparent border-0 border-b border-white/20 focus:border-gold-premium focus:ring-0 text-white py-3 transition-all placeholder-white/30 font-body" placeholder="ESCREVA SUA MENSAGEM..." data-i18n-placeholder="careers.form.message_placeholder" rows="2" name="message"></textarea>
+                            </div>
+                            
+                            <div id="submit-error" class="hidden text-red-500 font-mono text-[10px] uppercase tracking-wider text-center py-2"></div>
+                            
+                            <button id="career-submit-btn" class="w-full gold-gradient text-white font-headline font-bold py-5 uppercase tracking-[0.4em] text-[10px] hover:shadow-[0_20px_60px_rgba(229,161,0,0.2)] transition-all duration-700 interactive" type="submit">
+                                <span data-i18n="careers.form.submit">Enviar Candidatura</span>
+                            </button>
+                        </form>
+                        
+                        <!-- Career Success message -->
+                        <div id="career-success" class="hidden text-center py-12">
+                            <span class="material-symbols-outlined text-gold-premium text-6xl block mb-6" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <h3 class="font-headline font-bold text-white text-2xl uppercase tracking-[0.2em] mb-4" data-i18n="careers.form.success.title">Candidatura Enviada</h3>
+                            <p class="text-white/50 font-body text-sm tracking-wider max-w-sm mx-auto leading-relaxed" data-i18n="careers.form.success.desc">Candidatura enviada com sucesso. Nosso time avaliará seu perfil e retornará em caso de compatibilidade.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-surface-container-lowest border-t border-white/5 z-10 relative">
+    <div class="flex justify-center md:justify-between items-center w-full max-w-[1400px] mx-auto px-6 md:px-16 pt-16 md:pt-24 pb-8 md:pb-12 border-b border-white/5 border-dashed">
+        <img src="LOGOS/customcolor/icon/MORAES_ICONE_PRETO.png" alt="Ícone Moraes" class="hidden md:block h-20 sm:h-28 md:h-40 lg:h-56 w-auto invert brightness-0">
+        <img src="LOGOS/customcolor/text/logoname/MORAES_TEXTO_PRETO.png" alt="Moraes Engenharia" class="h-12 sm:h-16 md:h-24 lg:h-32 w-auto invert brightness-0">
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 md:gap-8 px-6 md:px-16 py-12 md:py-16 w-full max-w-[1400px] mx-auto">
+        <div class="flex flex-col gap-6">
+            <p class="font-body text-[11px] tracking-[0.3em] uppercase text-white/30 max-w-xs leading-loose" data-i18n="footer.tagline">
+                Construções comerciais de alto padrão em São Paulo e Rio de Janeiro.
+            </p>
+            <a href="https://www.instagram.com/lucasimas__" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 text-white/30 hover:text-gold-premium transition-colors duration-300 interactive">
+                <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                <span class="font-mono text-[10px] tracking-[0.3em] uppercase">@lucasimas__</span>
+            </a>
+        </div>
+        <div class="flex flex-col gap-4">
+            <h4 class="text-gold-premium font-headline font-bold text-[11px] uppercase tracking-[0.5em] mb-2" data-i18n="footer.nav_title">Navegação</h4>
+            <nav class="flex flex-col gap-3">
+                <a href="index.html" class="text-white/40 hover:text-white font-headline text-[10px] tracking-[0.4em] uppercase transition-colors duration-300 interactive" data-i18n="footer.nav.home">Início</a>
+                <a href="sobre.html" class="text-white/40 hover:text-white font-headline text-[10px] tracking-[0.4em] uppercase transition-colors duration-300 interactive" data-i18n="footer.nav.about">Sobre</a>
+                <a href="servicos.html" class="text-white/40 hover:text-white font-headline text-[10px] tracking-[0.4em] uppercase transition-colors duration-300 interactive" data-i18n="footer.nav.services">Serviços</a>
+                <a href="portfolio.html" class="text-white/40 hover:text-white font-headline text-[10px] tracking-[0.4em] uppercase transition-colors duration-300 interactive" data-i18n="footer.nav.portfolio">Obras</a>
+                <a href="contato.html" class="text-white/40 hover:text-white font-headline text-[10px] tracking-[0.4em] uppercase transition-colors duration-300 interactive" data-i18n="footer.nav.contact">Contato</a>
+                <a href="carreiras.html" class="text-white/40 hover:text-white font-headline text-[10px] tracking-[0.4em] uppercase transition-colors duration-300 interactive" data-i18n="footer.nav.careers">Carreiras</a>
+            </nav>
+        </div>
+        <div class="flex flex-col gap-6">
+            <h4 class="text-gold-premium font-headline font-bold text-[11px] uppercase tracking-[0.5em] mb-2" data-i18n="footer.office_title">Escritório Central</h4>
+            <p class="text-white/40 font-headline text-[10px] tracking-[0.4em] uppercase leading-loose" data-i18n="footer.office_address">
+                Rua Boa Vista, 254 — Sala 1516<br>Centro Histórico, São Paulo
+            </p>
+            <a href="mailto:contato@moraesengenharia.com" class="text-white/40 hover:text-gold-premium font-headline text-[10px] tracking-[0.4em] uppercase transition-colors duration-300 interactive">contato@moraesengenharia.com</a>
+            <a href="https://wa.me/5511993972691" target="_blank" rel="noopener noreferrer" class="text-white/40 hover:text-gold-premium font-headline text-[10px] tracking-[0.4em] uppercase transition-colors duration-300 interactive">(11) 99397-2691</a>
+            <span class="text-white/40 hover:text-[#07C160] font-headline text-[10px] tracking-[0.4em] uppercase transition-colors duration-300 interactive cursor-pointer" onclick="navigator.clipboard.writeText('LucasSimas11'); alert(window.MoraesI18n && window.MoraesI18n.getLang() === 'zh' ? 'WeChat ID 已复制: LucasSimas11\n\n(去搜索并粘贴ID添加好友)' : 'WeChat ID copiado: LucasSimas11\n\n(Cole o ID na barra de pesquisa do app)'); window.location.href = 'weixin://';">WeChat: LucasSimas11</span>
+        </div>
+    </div>
+    <div class="border-t border-white/5 border-dashed">
+        <div class="px-6 md:px-16 py-6 md:py-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left w-full max-w-[1400px] mx-auto">
+            <p class="font-mono text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-white/20" data-i18n="footer.copyright">© 2026 Moraes Engenharia. Todos os direitos reservados.</p>
+            <p class="font-mono text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-white/20" data-i18n="footer.crea">CREA-SP 2884830 &nbsp;•&nbsp; CNPJ 47.457.237/0001-60</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const menuOverlay = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    
+    menuBtn.addEventListener('click', () => {
+        const isActive = menuOverlay.classList.toggle('menu-active');
+        menuIcon.textContent = isActive ? 'close' : 'menu';
+    });
+
+    const cursor = document.getElementById('cursor-follower');
+    let mouseX = 0, mouseY = 0, posX = 0, posY = 0;
+    document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
+    function updateFrame() {
+        posX += (mouseX - posX) * 0.45; posY += (mouseY - posY) * 0.45;
+        if(cursor) cursor.style.transform = `translate3d(${posX - 16}px, ${posY - 16}px, 0)`;
+        requestAnimationFrame(updateFrame);
+    }
+    updateFrame();
+
+    document.querySelectorAll('.interactive').forEach(el => {
+        el.addEventListener('mouseenter', () => document.body?.classList.add('cursor-active'));
+        el.addEventListener('mouseleave', () => document.body?.classList.remove('cursor-active'));
+    });
+
+    const revealOnScroll = () => {
+        document.querySelectorAll('.reveal-up').forEach(el => {
+            if (el.getBoundingClientRect().top < window.innerHeight * 0.85) el.classList.add('visible');
+        });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+
+    // Careers Form Logic (Trabalhe Conosco)
+    const careerPhoneInput = document.getElementById('career-phone');
+    if (careerPhoneInput) {
+        careerPhoneInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 11) value = value.slice(0, 11);
+            
+            let formatted = '';
+            if (value.length > 0) {
+                formatted = '(' + value.slice(0, 2);
+                if (value.length > 2) {
+                    formatted += ') ';
+                    if (value.length <= 10) {
+                        formatted += value.slice(2, 6);
+                        if (value.length > 6) {
+                            formatted += '-' + value.slice(6, 10);
+                        }
+                    } else {
+                        formatted += value.slice(2, 7);
+                        if (value.length > 7) {
+                            formatted += '-' + value.slice(7, 11);
+                        }
+                    }
+                }
+            }
+            e.target.value = formatted;
+        });
+    }
+
+    const careerFileInput = document.getElementById('career-file');
+    const careerFileText = document.getElementById('file-text');
+    const careerFileIcon = document.getElementById('file-icon');
+    const careerFileError = document.getElementById('file-error');
+
+    if (careerFileInput) {
+        careerFileInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            careerFileError.classList.add('hidden');
+            careerFileError.textContent = '';
+            
+            if (!file) {
+                careerFileText.textContent = window.MoraesI18n && window.MoraesI18n.getLang() === 'zh' ? '上传简历' : 'Anexar Currículo';
+                careerFileIcon.textContent = 'attach_file';
+                careerFileIcon.classList.remove('text-gold-premium', 'text-red-500');
+                careerFileText.classList.remove('text-gold-premium', 'text-red-500');
+                return;
+            }
+            
+            // Validate file extension / mime type (PDF only)
+            if (file.type !== 'application/pdf' && !file.name.toLowerCase().endsWith('.pdf')) {
+                careerFileError.textContent = window.MoraesI18n && window.MoraesI18n.getLang() === 'zh' 
+                    ? '错误：仅接受 PDF 格式文件' 
+                    : 'Erro: Apenas arquivos PDF são aceitos';
+                careerFileError.classList.remove('hidden');
+                
+                careerFileText.textContent = window.MoraesI18n && window.MoraesI18n.getLang() === 'zh' ? '文件错误' : 'Arquivo Inválido';
+                careerFileIcon.textContent = 'error';
+                careerFileIcon.classList.add('text-red-500');
+                careerFileText.classList.add('text-red-500');
+                
+                careerFileInput.value = ''; // Reset input
+                return;
+            }
+            
+            // Validate file size (<= 5MB)
+            const maxSizeBytes = 5 * 1024 * 1024;
+            if (file.size > maxSizeBytes) {
+                careerFileError.textContent = window.MoraesI18n && window.MoraesI18n.getLang() === 'zh' 
+                    ? '错误：文件大小超过 5MB 限制' 
+                    : 'Erro: O tamanho do arquivo excede o limite de 5MB';
+                careerFileError.classList.remove('hidden');
+                
+                careerFileText.textContent = window.MoraesI18n && window.MoraesI18n.getLang() === 'zh' ? '文件太大' : 'Arquivo muito grande';
+                careerFileIcon.textContent = 'warning';
+                careerFileIcon.classList.add('text-red-500');
+                careerFileText.classList.add('text-red-500');
+                
+                careerFileInput.value = ''; // Reset input
+                return;
+            }
+            
+            // Success: Display filename
+            careerFileText.textContent = file.name.length > 25 ? file.name.slice(0, 22) + '...' : file.name;
+            careerFileIcon.textContent = 'check';
+            careerFileIcon.classList.add('text-gold-premium');
+            careerFileText.classList.add('text-gold-premium');
+        });
+    }
+
+    const careerForm = document.getElementById('career-form');
+    const careerSuccess = document.getElementById('career-success');
+    const careerSubmitBtn = document.getElementById('career-submit-btn');
+    const careerSubmitError = document.getElementById('submit-error');
+
+    if (careerForm) {
+        careerForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = careerForm.name.value.trim();
+            const email = careerForm.email.value.trim();
+            const phone = careerPhoneInput ? careerPhoneInput.value.replace(/\D/g, '') : '';
+            const area = careerForm.interest_area.value;
+            const file = careerFileInput ? careerFileInput.files[0] : null;
+            
+            careerSubmitError.classList.add('hidden');
+            careerSubmitError.textContent = '';
+            
+            if (!name || !email || phone.length < 10 || !area || !file) {
+                careerSubmitError.textContent = window.MoraesI18n && window.MoraesI18n.getLang() === 'zh' 
+                    ? '请正确填写所有必填字段并上传简历。' 
+                    : 'Por favor, preencha todos os campos obrigatórios e anexe seu currículo.';
+                careerSubmitError.classList.remove('hidden');
+                return;
+            }
+            
+            const submitSpan = careerSubmitBtn.querySelector('span');
+            const originalText = submitSpan ? submitSpan.textContent : '';
+            if (submitSpan) {
+                submitSpan.textContent = window.MoraesI18n && window.MoraesI18n.getLang() === 'zh' ? '发送中...' : 'ENVIANDO...';
+            }
+            careerSubmitBtn.disabled = true;
+            
+            fetch(careerForm.action, {
+                method: 'POST',
+                body: new FormData(careerForm),
+                headers: { 'Accept': 'application/json' }
+            })
+            .then(response => {
+                if (response.ok) {
+                    careerForm.style.transition = 'opacity 0.5s ease';
+                    careerForm.style.opacity = '0';
+                    setTimeout(() => {
+                        careerForm.classList.add('hidden');
+                        careerSuccess.classList.remove('hidden');
+                        careerSuccess.style.opacity = '0';
+                        careerSuccess.style.transition = 'opacity 0.5s ease';
+                        setTimeout(() => {
+                            careerSuccess.style.opacity = '1';
+                        }, 50);
+                    }, 500);
+                } else {
+                    throw new Error('Response not OK');
+                }
+            })
+            .catch(error => {
+                console.error('Error submitting form:', error);
+                if (submitSpan) submitSpan.textContent = originalText;
+                careerSubmitBtn.disabled = false;
+                careerSubmitError.textContent = window.MoraesI18n && window.MoraesI18n.getLang() === 'zh'
+                    ? '提交失败，请稍后重试或直接发送邮件至 contato@moraesengenharia.com'
+                    : 'Erro ao enviar. Tente novamente mais tarde ou envie para contato@moraesengenharia.com';
+                careerSubmitError.classList.remove('hidden');
+            });
+        });
+    }
+
+    // Add interactive class hooks to new dynamic elements for custom cursor follow effect
+    document.querySelectorAll('#careers-section .interactive').forEach(el => {
+        el.addEventListener('mouseenter', () => document.body?.classList.add('cursor-active'));
+        el.addEventListener('mouseleave', () => document.body?.classList.remove('cursor-active'));
+    });
+</script>
+<script src="translations.js"></script>
+</body>
+</html>
