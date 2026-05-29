@@ -4,3 +4,11 @@ node_modules/
 .vercel
 fix_*.py
 implement_*.py
+
+# macOS clutter
+.DS_Store
+
+# Arquivos-fonte pesados (o site usa as versões otimizadas em IMAGENS/web/)
+*.ARW
+IMAGENS/*.png
+IMAGENS/BRUNOENG.jpg
