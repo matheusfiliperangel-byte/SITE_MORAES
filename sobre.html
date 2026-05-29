@@ -67,6 +67,14 @@ tailwind.config = {
     #team-gallery figure.is-zoomed img { filter: grayscale(0); }
     #team-gallery figure.is-zoomed figcaption { opacity: 1; }
     #team-gallery figure.is-zoomed .tile-border { border-color: rgba(229,161,0,0.45); }
+
+    /* Mobile/touch: holofote conforme a rolagem (foto central cresce e colore) */
+    #team-gallery.touch-mode { grid-template-columns: 1fr; }
+    #team-gallery.touch-mode figure { transform: scale(0.82); opacity: 0.5; transition: transform 0.5s ease, opacity 0.5s ease; }
+    #team-gallery.touch-mode figure.is-active { transform: scale(1); opacity: 1; }
+    #team-gallery.touch-mode figure.is-active img { filter: grayscale(0); }
+    #team-gallery.touch-mode figure.is-active figcaption { opacity: 1; }
+    #team-gallery.touch-mode figure.is-active .tile-border { border-color: rgba(229,161,0,0.45); }
 </style>
 </head>
 <body class="bg-background text-on-background font-body selection:bg-gold-premium selection:text-white">
@@ -388,32 +396,58 @@ tailwind.config = {
 </script>
 <script src="translations.js"></script>
 <script>
-// Galeria da equipe: amplia a foto só quando o cursor chega na região central
+// Galeria da equipe: desktop amplia no centro com o cursor; mobile usa holofote ao rolar
 (function () {
     const gallery = document.getElementById('team-gallery');
-    if (!gallery || window.matchMedia('(hover: none)').matches) return;
+    if (!gallery) return;
+    const figures = Array.from(gallery.querySelectorAll('figure'));
+    const touch = window.matchMedia('(hover: none)').matches;
 
-    const ZOOM = 1.7;        // deve casar com o scale() do CSS .is-zoomed
-    const ENTER = 0.28;      // ativa: cursor dentro dos 44% centrais
-    const LEAVE = 0.06;      // mantém ativo até quase a borda (histerese)
+    if (!touch) {
+        // DESKTOP: amplia a foto só quando o cursor chega na região central
+        const ZOOM = 1.7;    // deve casar com o scale() do CSS .is-zoomed
+        const ENTER = 0.28;  // ativa: cursor dentro dos 44% centrais
+        const LEAVE = 0.06;  // mantém ativo até quase a borda (histerese)
+        figures.forEach(function (fig) {
+            function update(e) {
+                const zoomed = fig.classList.contains('is-zoomed');
+                const s = zoomed ? ZOOM : 1;
+                const r = fig.getBoundingClientRect();
+                const w = fig.offsetWidth, h = fig.offsetHeight;
+                const x = (e.clientX - r.left) / s;
+                const y = (e.clientY - r.top) / s;
+                const inset = zoomed ? LEAVE : ENTER;
+                const inCenter = x > w * inset && x < w * (1 - inset) &&
+                                 y > h * inset && y < h * (1 - inset);
+                fig.classList.toggle('is-zoomed', inCenter);
+            }
+            fig.addEventListener('mousemove', update);
+            fig.addEventListener('mouseleave', function () { fig.classList.remove('is-zoomed'); });
+        });
+        return;
+    }
 
-    gallery.querySelectorAll('figure').forEach(function (fig) {
-        function update(e) {
-            const zoomed = fig.classList.contains('is-zoomed');
-            const s = zoomed ? ZOOM : 1;
+    // MOBILE/TOUCH: a foto mais próxima do centro da tela vira o destaque
+    gallery.classList.add('touch-mode');
+    let ticking = false;
+    function spotlight() {
+        ticking = false;
+        const mid = window.innerHeight / 2;
+        let best = null, bestDist = Infinity;
+        figures.forEach(function (fig) {
             const r = fig.getBoundingClientRect();
-            const w = fig.offsetWidth, h = fig.offsetHeight;
-            // coordenadas locais sem o efeito da escala
-            const x = (e.clientX - r.left) / s;
-            const y = (e.clientY - r.top) / s;
-            const inset = zoomed ? LEAVE : ENTER;
-            const inCenter = x > w * inset && x < w * (1 - inset) &&
-                             y > h * inset && y < h * (1 - inset);
-            fig.classList.toggle('is-zoomed', inCenter);
-        }
-        fig.addEventListener('mousemove', update);
-        fig.addEventListener('mouseleave', function () { fig.classList.remove('is-zoomed'); });
-    });
+            if (r.bottom < 0 || r.top > window.innerHeight) return; // fora da tela
+            const dist = Math.abs((r.top + r.height / 2) - mid);
+            if (dist < bestDist) { bestDist = dist; best = fig; }
+        });
+        figures.forEach(function (fig) { fig.classList.toggle('is-active', fig === best); });
+    }
+    function onScroll() {
+        if (!ticking) { ticking = true; requestAnimationFrame(spotlight); }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    spotlight();
 })();
 </script>
 </body>
