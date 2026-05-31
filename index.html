@@ -103,8 +103,8 @@ tailwind.config = {
     .cursor-active #cursor-follower {
         width: 64px; height: 64px; border-color: #E5A100;
     }
-    @media (hover: none) or (pointer: coarse) {
-        #cursor-follower { display: none; }
+    @media (hover: none), (pointer: coarse) {
+        #cursor-follower { display: none !important; }
     }
     .bg-architectural-hero {
         background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0.7), rgba(5, 5, 5, 1)), url('https://images.unsplash.com/photo-1541888086225-f6740f9e8026?q=80&w=2670&auto=format&fit=crop');
